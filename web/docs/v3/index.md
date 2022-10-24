@@ -1,7 +1,7 @@
 # 介绍
 
 <p align="center">
-<a href="https://pay.yansongda.cn" target="_blank" rel="noopener noreferrer"><img width="200" src="https://pay.yansongda.cn/images/logo.png" alt="Logo"></a>
+<a href="https://pay.duan617.cn" target="_blank" rel="noopener noreferrer"><img width="200" src="https://pay.duan617.cn/images/logo.png" alt="Logo"></a>
 </p>
 
 该文档为 v3 版本的文档，如果您正在使用 v2.x 版本的 SDK，请您传送至 [这里](/docs/v2/)。
@@ -14,9 +14,9 @@ v3 版与 v2 版在底层有很大的不同，基础架构做了重新的设计�
 
 欢迎 Star，欢迎 PR！
 
-hyperf 扩展包请 [传送至这里](https://github.com/yansongda/hyperf-pay)
+hyperf 扩展包请 [传送至这里](https://github.com/duan617/hyperf-pay)
 
-laravel 扩展包请 [传送至这里](https://github.com/yansongda/laravel-pay)
+laravel 扩展包请 [传送至这里](https://github.com/duan617/laravel-pay)
 
 yii 扩展包请 [传送至这里](https://github.com/guanguans/yii-pay)
 

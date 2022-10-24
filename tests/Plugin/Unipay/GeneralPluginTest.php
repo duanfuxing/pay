@@ -36,7 +36,7 @@ class GeneralPluginTest extends TestCase
 
         self::assertInstanceOf(RequestInterface::class, $radar);
         self::assertEquals('POST', $radar->getMethod());
-        self::assertEquals(new Uri(Unipay::URL[Pay::MODE_NORMAL].'yansongda/pay'), $radar->getUri());
+        self::assertEquals(new Uri(Unipay::URL[Pay::MODE_NORMAL].'duan617/pay'), $radar->getUri());
     }
 
     public function testAbsoluteUrl()
@@ -48,6 +48,6 @@ class GeneralPluginTest extends TestCase
 
         $radar = $result->getRadar();
 
-        self::assertEquals(new Uri('https://yansongda.cn/pay'), $radar->getUri());
+        self::assertEquals(new Uri('https://duan617.cn/pay'), $radar->getUri());
     }
 }

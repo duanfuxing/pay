@@ -13,7 +13,7 @@ class UnipayGeneralPluginStub extends GeneralPlugin
 
     protected function getUri(Rocket $rocket): string
     {
-        return 'yansongda/pay';
+        return 'duan617/pay';
     }
 }
 
@@ -25,6 +25,6 @@ class UnipayGeneralPluginStub1 extends GeneralPlugin
 
     protected function getUri(Rocket $rocket): string
     {
-        return 'https://yansongda.cn/pay';
+        return 'https://duan617.cn/pay';
     }
 }

@@ -24,7 +24,7 @@ class InvokePrepayPluginTest extends TestCase
 
     public function testNormal()
     {
-        $rocket = (new Rocket())->setParams([])->setDestination(new Collection(['prepay_id' => 'yansongda anthony']));
+        $rocket = (new Rocket())->setParams([])->setDestination(new Collection(['prepay_id' => 'duan617 anthony']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
@@ -43,7 +43,7 @@ class InvokePrepayPluginTest extends TestCase
     {
         $rocket = (new Rocket())->setParams(['_config' => 'service_provider']);
         $rocket->setPayload(new Collection(['out_trade_no'=>'121218']));
-        $rocket->setDestination(new Collection(['prepay_id' => 'yansongda anthony']));
+        $rocket->setDestination(new Collection(['prepay_id' => 'duan617 anthony']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
@@ -62,7 +62,7 @@ class InvokePrepayPluginTest extends TestCase
     {
         $rocket = (new Rocket())->setParams(['_config' => 'service_provider']);
         $rocket->setPayload(new Collection(['out_trade_no'=>'121218','sub_appid' =>'wx55955316af4ef88']));
-        $rocket->setDestination(new Collection(['prepay_id' => 'yansongda anthony']));
+        $rocket->setDestination(new Collection(['prepay_id' => 'duan617 anthony']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 

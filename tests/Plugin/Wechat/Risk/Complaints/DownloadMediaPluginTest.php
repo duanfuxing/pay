@@ -28,7 +28,7 @@ class DownloadMediaPluginTest extends TestCase
     public function testNormal()
     {
         $rocket = new Rocket();
-        $rocket->setParams([])->setPayload(new Collection(['media_url' => 'https://yansongda.cn']));
+        $rocket->setParams([])->setPayload(new Collection(['media_url' => 'https://duan617.cn']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
@@ -36,7 +36,7 @@ class DownloadMediaPluginTest extends TestCase
 
         self::assertEquals(OriginResponseParser::class, $result->getDirection());
         self::assertEquals('GET', $radar->getMethod());
-        self::assertEquals(new Uri('https://yansongda.cn'), $radar->getUri());
+        self::assertEquals(new Uri('https://duan617.cn'), $radar->getUri());
     }
 
     public function testNormalNoDownloadUrl()

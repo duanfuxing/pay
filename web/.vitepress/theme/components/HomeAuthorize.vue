@@ -4,11 +4,11 @@
       <h2>授权</h2>
       <h3>类库</h3>
       <p>
-        <a href="https://github.com/yansongda/pay">yansongda/pay</a> 项目采用 MIT 协议开源发布，任何人均可在遵循 MIT 协议的情况下随意使用。
+        <a href="https://github.com/duan617/pay">duan617/pay</a> 项目采用 MIT 协议开源发布，任何人均可在遵循 MIT 协议的情况下随意使用。
       </p>
       <h3>文档</h3>
       <p>
-        网站 <a href="https://pay.yansongda.cn">pay.yansongda.cn</a>（包括但不限于 `pay.yansongda.cn` 域名下所有文字、图片）以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY SA 4.0 国际许可协议</a>授权。
+        网站 <a href="https://pay.duan617.cn">pay.duan617.cn</a>（包括但不限于 `pay.duan617.cn` 域名下所有文字、图片）以 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY SA 4.0 国际许可协议</a>授权。
       </p>
     </div>
   </div>

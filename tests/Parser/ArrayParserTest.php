@@ -24,7 +24,7 @@ class ArrayParserTest extends TestCase
         self::expectException(InvalidResponseException::class);
         self::expectExceptionCode(Exception::UNPACK_RESPONSE_ERROR);
 
-        $response = new Response(200, [], '{"name": "yansongda"}a');
+        $response = new Response(200, [], '{"name": "duan617"}a');
 
         $parser = new ArrayParser();
         $parser->parse($response);
@@ -32,45 +32,45 @@ class ArrayParserTest extends TestCase
 
     public function testNormal()
     {
-        $response = new Response(200, [], '{"name": "yansongda"}');
+        $response = new Response(200, [], '{"name": "duan617"}');
 
         $parser = new ArrayParser();
         $result = $parser->parse($response);
 
-        self::assertEquals(['name' => 'yansongda'], $result);
+        self::assertEquals(['name' => 'duan617'], $result);
     }
 
     public function testReadContents()
     {
-        $response = new Response(200, [], '{"name": "yansongda"}');
+        $response = new Response(200, [], '{"name": "duan617"}');
 
         $response->getBody()->read(2);
 
         $parser = new ArrayParser();
         $result = $parser->parse($response);
 
-        self::assertEquals(['name' => 'yansongda'], $result);
+        self::assertEquals(['name' => 'duan617'], $result);
     }
 
     public function testQueryBody()
     {
-        $response = new Response(200, [], 'name=yansongda&age=29');
+        $response = new Response(200, [], 'name=duan617&age=29');
 
         $parser = new ArrayParser();
         $result = $parser->parse($response);
 
-        self::assertEqualsCanonicalizing(['name' => 'yansongda', 'age' => '29'], $result);
+        self::assertEqualsCanonicalizing(['name' => 'duan617', 'age' => '29'], $result);
     }
 
     public function testJsonWith()
     {
-        $url = 'https://yansongda.cn?name=yansongda&age=29';
+        $url = 'https://duan617.cn?name=duan617&age=29';
 
         $response = new Response(200, [], json_encode(['h5_url' => $url]));
 
         $parser = new ArrayParser();
         $result = $parser->parse($response);
 
-        self::assertEquals('https://yansongda.cn?name=yansongda&age=29', $result['h5_url']);
+        self::assertEquals('https://duan617.cn?name=duan617&age=29', $result['h5_url']);
     }
 }

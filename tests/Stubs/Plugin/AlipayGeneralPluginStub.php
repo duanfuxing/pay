@@ -8,6 +8,6 @@ class AlipayGeneralPluginStub extends GeneralPlugin
 {
     protected function getMethod(): string
     {
-        return 'yansongda';
+        return 'duan617';
     }
 }

@@ -31,7 +31,7 @@ class RadarSignPluginTest extends TestCase
             "version" => "1.0",
             "app_cert_sn" => "fb5e86cfb784de936dd3594e32381cf8",
             "alipay_root_cert_sn" => "687b59193f3f462dd5336e5abf83c5d8_02941eef3187dddf3d3b83462e1dfcf6",
-            "biz_content" => ['out_trade_no' => "yansongda-1622986519"],
+            "biz_content" => ['out_trade_no' => "duan617-1622986519"],
         ];
         $sign = "QMh6CzKWIt5yIYCrYrMdC2/Mt+4lTNEaPN0biIZPuiWzgTS7pyIYFOmb+dEi70X5q9UaCBlejwwwTEzRtfIjudPu/mIrlpnwsN8mEhDjyZihmgb/wCZy+kR0OIwvZjTd/3AuALIcwDbhZqDwssZAOTlco4eE7WosEdsob52OfCBAn0ZEf/9zZk5+FSbL8xbwO9hTlspl5ArgFBf9RryBxAviC09Nr5eSNdwYBIyOUdLtEVHBuHHvwa4UfiCFe0SyDFVQODgoz3Mjcs5d4RmJqKNLorkN8dHzjzlAnCR07EHsMzV4ivNG703hReHMyazPDuaWBg11/spMJUNUF/tEBQ==";
 
@@ -56,7 +56,7 @@ class RadarSignPluginTest extends TestCase
             "version" => "1.0",
             "app_cert_sn" => "fb5e86cfb784de936dd3594e32381cf8",
             "alipay_root_cert_sn" => "687b59193f3f462dd5336e5abf83c5d8_02941eef3187dddf3d3b83462e1dfcf6",
-            "biz_content" => ['out_trade_no' => "yansongda-1622986519", '_method' => 'get', '_ignore' => true],
+            "biz_content" => ['out_trade_no' => "duan617-1622986519", '_method' => 'get', '_ignore' => true],
         ];
         $sign = "QMh6CzKWIt5yIYCrYrMdC2/Mt+4lTNEaPN0biIZPuiWzgTS7pyIYFOmb+dEi70X5q9UaCBlejwwwTEzRtfIjudPu/mIrlpnwsN8mEhDjyZihmgb/wCZy+kR0OIwvZjTd/3AuALIcwDbhZqDwssZAOTlco4eE7WosEdsob52OfCBAn0ZEf/9zZk5+FSbL8xbwO9hTlspl5ArgFBf9RryBxAviC09Nr5eSNdwYBIyOUdLtEVHBuHHvwa4UfiCFe0SyDFVQODgoz3Mjcs5d4RmJqKNLorkN8dHzjzlAnCR07EHsMzV4ivNG703hReHMyazPDuaWBg11/spMJUNUF/tEBQ==";
 
@@ -71,18 +71,18 @@ class RadarSignPluginTest extends TestCase
     public function testRadarPostNormal()
     {
         $rocket = new Rocket();
-        $rocket->setParams([])->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setParams([])->setPayload(new Collection(['name' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
-        self::stringContains('name=yansongda', (string) $result->getRadar()->getBody());
+        self::stringContains('name=duan617', (string) $result->getRadar()->getBody());
         self::assertEquals('POST', $result->getRadar()->getMethod());
     }
 
     public function testRadarGetNormal()
     {
         $rocket = new Rocket();
-        $rocket->setParams(['_method' => 'get'])->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setParams(['_method' => 'get'])->setPayload(new Collection(['name' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 

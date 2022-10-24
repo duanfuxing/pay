@@ -84,7 +84,7 @@ class PrepayPluginTest extends TestCase
         self::assertArrayNotHasKey('sp_mchid', $payload->all());
         self::assertArrayNotHasKey('sub_appid', $payload->all());
         self::assertArrayNotHasKey('sub_mchid', $payload->all());
-        self::assertEquals('yansongda', $payload->get('appid'));
+        self::assertEquals('duan617', $payload->get('appid'));
         self::assertEquals('1600314069', $payload->get('mchid'));
     }
 

@@ -72,11 +72,11 @@ class RefundPluginTest extends TestCase
         $rocket = (new Rocket())
             ->setParams([])->setPayload(new Collection());
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
-        self::assertEquals('pay.yansongda.cn', $result->getPayload()->get('notify_url'));
+        self::assertEquals('pay.duan617.cn', $result->getPayload()->get('notify_url'));
 
         $rocket = (new Rocket())
-            ->setParams([])->setPayload(new Collection(['notify_url' => 'yansongda.cn']));
+            ->setParams([])->setPayload(new Collection(['notify_url' => 'duan617.cn']));
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
-        self::assertEquals('yansongda.cn', $result->getPayload()->get('notify_url'));
+        self::assertEquals('duan617.cn', $result->getPayload()->get('notify_url'));
     }
 }

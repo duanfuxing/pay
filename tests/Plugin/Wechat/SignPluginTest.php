@@ -30,7 +30,7 @@ class SignPluginTest extends TestCase
     public function testNormal()
     {
         $params = [
-            'name' => 'yansongda',
+            'name' => 'duan617',
             'age' => 28,
         ];
         $rocket = (new Rocket())->setParams($params)
@@ -48,8 +48,8 @@ class SignPluginTest extends TestCase
     public function testNormalWithWechatSerial()
     {
         $params = [
-            '_serial_no' => 'yansongda',
-            'name' => 'yansongda',
+            '_serial_no' => 'duan617',
+            'name' => 'duan617',
             'age' => 28,
         ];
         $rocket = (new Rocket())->setParams($params)
@@ -67,7 +67,7 @@ class SignPluginTest extends TestCase
     {
         $params = [
             'out_trade_no' => 1626493236,
-            'description' => 'yansongda 测试 - 1626493236',
+            'description' => 'duan617 测试 - 1626493236',
             'amount' => [
                 'total' => 1,
             ],
@@ -79,7 +79,7 @@ class SignPluginTest extends TestCase
             ]];
         $timestamp = 1626493236;
         $random = 'QqtzdVzxavZeXag9G5mtfzbfzFMf89p6';
-        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"yansongda 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
+        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"duan617 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
 
         $class = new ReflectionClass($this->plugin);
         $method = $class->getMethod('getWechatAuthorization');
@@ -97,7 +97,7 @@ class SignPluginTest extends TestCase
     {
         $params = [
             'out_trade_no' => 1626493236,
-            'description' => 'yansongda 测试 - 1626493236',
+            'description' => 'duan617 测试 - 1626493236',
             'amount' => [
                 'total' => 1,
             ],
@@ -109,7 +109,7 @@ class SignPluginTest extends TestCase
             ]];
         $timestamp = 1626493236;
         $random = 'QqtzdVzxavZeXag9G5mtfzbfzFMf89p6';
-        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"yansongda 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
+        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"duan617 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
 
         $config = Pay::get(ConfigInterface::class);
         $config->set('wechat.default.mch_public_cert_path', null);
@@ -128,7 +128,7 @@ class SignPluginTest extends TestCase
     {
         $params = [
             'out_trade_no' => 1626493236,
-            'description' => 'yansongda 测试 - 1626493236',
+            'description' => 'duan617 测试 - 1626493236',
             'amount' => [
                 'total' => 1,
             ],
@@ -140,7 +140,7 @@ class SignPluginTest extends TestCase
             ]];
         $timestamp = 1626493236;
         $random = 'QqtzdVzxavZeXag9G5mtfzbfzFMf89p6';
-        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"yansongda 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
+        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"duan617 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
 
         $config = Pay::get(ConfigInterface::class);
         $config->set('wechat.default.mch_public_cert_path', __DIR__.'/../../Cert/foo');

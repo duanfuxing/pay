@@ -14,7 +14,7 @@ namespace Yansongda\Pay\Contract;
 interface ShortcutInterface
 {
     /**
-     * @author yansongda <me@yansongda.cn>
+     * @author duan617 <me@duan617.cn>
      *
      * @return \Yansongda\Pay\Contract\PluginInterface[]|string[]
      */

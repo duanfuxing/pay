@@ -1,18 +1,19 @@
 <p align="center">
-      <a href="https://pay.yansongda.cn" target="_blank" rel="noopener noreferrer"><img width="200" src="https://pay.yansongda.cn/images/logo.png" alt="Logo"></a>
+      <a href="https://pay.duan617.cn" target="_blank" rel="noopener noreferrer"><img width="200" src="https://pay.duan617.cn/images/logo.png" alt="Logo"></a>
 </p>
 
 <p align="center">
-    <a href="https://codecov.io/gh/yansongda/pay" ><img src="https://codecov.io/gh/yansongda/pay/branch/master/graph/badge.svg?token=tYMV0YT5jj"/></a>
-    <a href="https://scrutinizer-ci.com/g/yansongda/pay/?branch=master"><img src="https://scrutinizer-ci.com/g/yansongda/pay/badges/quality-score.png?b=master" alt="scrutinizer"></a>
-    <a href="https://github.com/yansongda/pay/actions"><img src="https://github.com/yansongda/pay/workflows/Linter/badge.svg" alt="Linter Status"></a>
-    <a href="https://github.com/yansongda/pay/actions"><img src="https://github.com/yansongda/pay/workflows/Tester/badge.svg" alt="Tester Status"></a>
-    <a href="https://packagist.org/packages/yansongda/pay"><img src="https://poser.pugx.org/yansongda/pay/v/stable" alt="Stable Version"></a>
-    <a href="https://packagist.org/packages/yansongda/pay"><img src="https://poser.pugx.org/yansongda/pay/downloads" alt="Total Downloads"></a>
-    <a href="https://packagist.org/packages/yansongda/pay"><img src="https://poser.pugx.org/yansongda/pay/license" alt="License"></a>
+    <a href="https://codecov.io/gh/duan617/pay" ><img src="https://codecov.io/gh/duan617/pay/branch/master/graph/badge.svg?token=tYMV0YT5jj"/></a>
+    <a href="https://scrutinizer-ci.com/g/duan617/pay/?branch=master"><img src="https://scrutinizer-ci.com/g/duan617/pay/badges/quality-score.png?b=master" alt="scrutinizer"></a>
+    <a href="https://github.com/duan617/pay/actions"><img src="https://github.com/duan617/pay/workflows/Linter/badge.svg" alt="Linter Status"></a>
+    <a href="https://github.com/duan617/pay/actions"><img src="https://github.com/duan617/pay/workflows/Tester/badge.svg" alt="Tester Status"></a>
+    <a href="https://packagist.org/packages/duan617/pay"><img src="https://poser.pugx.org/duan617/pay/v/stable" alt="Stable Version"></a>
+    <a href="https://packagist.org/packages/duan617/pay"><img src="https://poser.pugx.org/duan617/pay/downloads" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/duan617/pay"><img src="https://poser.pugx.org/duan617/pay/license" alt="License"></a>
 </p>
 
 ## 前言
+Fork form yansognda/pay 用法与原包一致，做了一些自定义的功能支持和更新
 
 v3 版与 v2 版在底层有很大的不同，基础架构做了重新的设计，更易扩展，使用起来更方便。
 
@@ -20,9 +21,9 @@ v3 版与 v2 版在底层有很大的不同，基础架构做了重新的设计�
 
 欢迎 Star，欢迎 PR！
 
-hyperf 扩展包请 [传送至这里](https://github.com/yansongda/hyperf-pay)
+hyperf 扩展包请 [传送至这里](https://github.com/duan617/hyperf-pay)
 
-laravel 扩展包请 [传送至这里](https://github.com/yansongda/laravel-pay)
+laravel 扩展包请 [传送至这里](https://github.com/duan617/laravel-pay)
 
 yii 扩展包请 [传送至这里](https://github.com/guanguans/yii-pay)
 
@@ -47,11 +48,11 @@ yii 扩展包请 [传送至这里](https://github.com/guanguans/yii-pay)
 
 ## 详细文档
 
-[https://pay.yansongda.cn](https://pay.yansongda.cn)
+[https://pay.duan617.cn](https://pay.duan617.cn)
 
 ## 支持的支付方法
 
-yansongda/pay 100% 兼容 支付宝/微信/银联 所有功能（包括服务商功能），只需通过「插件机制」引入即可。
+duan617/pay 100% 兼容 支付宝/微信/银联 所有功能（包括服务商功能），只需通过「插件机制」引入即可。
 
 同时，SDK 直接支持内置了以下插件，详情请查阅文档。
 
@@ -88,7 +89,7 @@ yansongda/pay 100% 兼容 支付宝/微信/银联 所有功能（包括服务商
 
 ## 安装
 ```shell
-composer require yansongda/pay:~3.2.0 -vvv
+composer require duan617/pay:~3.2.0 -vvv
 ```
 
 ## 深情一撇
@@ -111,13 +112,13 @@ class AlipayController
                 // 必填-应用私钥 字符串或路径
                 'app_secret_cert' => '89iZ2iC16H6/6a3YcP+hDZUjiNGQx9cuwi9eJyykvcwhD...',
                 // 必填-应用公钥证书 路径
-                'app_public_cert_path' => '/Users/yansongda/pay/cert/appCertPublicKey_2016082000295641.crt',
+                'app_public_cert_path' => '/Users/duan617/pay/cert/appCertPublicKey_2016082000295641.crt',
                 // 必填-支付宝公钥证书 路径
-                'alipay_public_cert_path' => '/Users/yansongda/pay/cert/alipayCertPublicKey_RSA2.crt',
+                'alipay_public_cert_path' => '/Users/duan617/pay/cert/alipayCertPublicKey_RSA2.crt',
                 // 必填-支付宝根证书 路径
-                'alipay_root_cert_path' => '/Users/yansongda/pay/cert/alipayRootCert.crt',
-                'return_url' => 'https://yansongda.cn/alipay/return',
-                'notify_url' => 'https://yansongda.cn/alipay/notify',
+                'alipay_root_cert_path' => '/Users/duan617/pay/cert/alipayRootCert.crt',
+                'return_url' => 'https://duan617.cn/alipay/return',
+                'notify_url' => 'https://duan617.cn/alipay/notify',
                 // 选填-服务商模式下的服务商 id，当 mode 为 Pay::MODE_SERVICE 时使用该参数
                 'service_provider_id' => '',
                 // 选填-默认为正常模式。可选为： MODE_NORMAL, MODE_SANDBOX, MODE_SERVICE
@@ -143,7 +144,7 @@ class AlipayController
         $result = Pay::alipay($this->config)->web([
             'out_trade_no' => ''.time(),
             'total_amount' => '0.01',
-            'subject' => 'yansongda 测试 - 1',
+            'subject' => 'duan617 测试 - 1',
         ]);
         
         return $result;
@@ -202,7 +203,7 @@ class WechatController
                 // 必填-商户公钥证书路径
                 'mch_public_cert_path' => '',
                 // 必填
-                'notify_url' => 'https://yansongda.cn/wechat/notify',
+                'notify_url' => 'https://duan617.cn/wechat/notify',
                 // 选填-公众号 的 app_id
                 'mp_app_id' => '2016082000291234',
                 // 选填-小程序 的 app_id
@@ -288,7 +289,7 @@ class WechatController
 
 ## 赏一杯咖啡吧
 
-![pay](https://cdn.jsdelivr.net/gh/yansongda/pay-site/.vuepress/public/images/pay.jpg)
+![pay](https://cdn.jsdelivr.net/gh/duan617/pay-site/.vuepress/public/images/pay.jpg)
 
 ## LICENSE
 

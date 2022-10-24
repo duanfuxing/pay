@@ -12,20 +12,20 @@ class RadarPluginTest extends TestCase
     public function testPostNormal()
     {
         $rocket = new Rocket();
-        $rocket->setParams([])->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setParams([])->setPayload(new Collection(['name' => 'duan617']));
 
         $plugin = new RadarPlugin();
 
         $result = $plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
-        self::assertEquals('name=yansongda', $result->getRadar()->getBody()->getContents());
+        self::assertEquals('name=duan617', $result->getRadar()->getBody()->getContents());
         self::assertEquals('POST', $result->getRadar()->getMethod());
     }
 
     public function testGetNormal()
     {
         $rocket = new Rocket();
-        $rocket->setParams(['_method' => 'get'])->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setParams(['_method' => 'get'])->setPayload(new Collection(['name' => 'duan617']));
 
         $plugin = new RadarPlugin();
 

@@ -63,7 +63,7 @@ class CreatePluginTest extends TestCase
                     'transfer_amount' => 1,
                     'transfer_remark' => 'test',
                     'openid' => 'MYE42l80oelYMDE34nYD456Xoy',
-                    'user_name' => 'yansongda'  // 明文传参即可，sdk 会自动加密
+                    'user_name' => 'duan617'  // 明文传参即可，sdk 会自动加密
                 ]
             ],
         ];
@@ -74,20 +74,20 @@ class CreatePluginTest extends TestCase
 
         $userName = $result->getPayload()->get('transfer_detail_list')[0]['user_name'];
 
-        self::assertTrue(in_array($result->getParams()['_serial_no'], ['45F59D4DABF31918AFCEC556D5D2C6E376675D57', 'yansongda']));
-        self::assertNotEquals('yansongda', $userName);
+        self::assertTrue(in_array($result->getParams()['_serial_no'], ['45F59D4DABF31918AFCEC556D5D2C6E376675D57', 'duan617']));
+        self::assertNotEquals('duan617', $userName);
         self::assertStringContainsString('==', $userName);
 
         // 传证书
         $params = [
-            '_serial_no' => 'yansongda',
+            '_serial_no' => 'duan617',
             'transfer_detail_list' => [
                 [
                     'out_detail_no' => time().'-1',
                     'transfer_amount' => 1,
                     'transfer_remark' => 'test',
                     'openid' => 'MYE42l80oelYMDE34nYD456Xoy',
-                    'user_name' => 'yansongda'  // 明文传参即可，sdk 会自动加密
+                    'user_name' => 'duan617'  // 明文传参即可，sdk 会自动加密
                 ]
             ],
         ];
@@ -98,7 +98,7 @@ class CreatePluginTest extends TestCase
 
         $userName = $result->getPayload()->get('transfer_detail_list')[0]['user_name'];
 
-        self::assertEquals('yansongda', $result->getParams()['_serial_no']);
+        self::assertEquals('duan617', $result->getParams()['_serial_no']);
         self::assertStringContainsString('==', $userName);
     }
 

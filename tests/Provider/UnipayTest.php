@@ -264,7 +264,7 @@ Q0C300Eo+XOoO4M1WvsRBAF13g9RPSw=\r
             "encoding" => "utf-8",
             "exchangeRate" => "0",
             "merId" => "777290058167151",
-            "orderId" => "yansongda20220908132206",
+            "orderId" => "duan61720220908132206",
             "queryId" => "782209081322060674028",
             "respCode" => "00",
             "respMsg" => "success",
@@ -311,7 +311,7 @@ Q0C300Eo+XOoO4M1WvsRBAF13g9RPSw=\r
         $result = Pay::unipay()->callback($input);
         self::assertNotEmpty($result->all());
 
-        $result = Pay::unipay()->callback((new ServerRequest('POST', 'https://pay.yansongda.cn'))->withParsedBody($input));
+        $result = Pay::unipay()->callback((new ServerRequest('POST', 'https://pay.duan617.cn'))->withParsedBody($input));
         self::assertNotEmpty($result->all());
     }
 }

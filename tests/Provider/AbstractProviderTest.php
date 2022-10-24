@@ -59,7 +59,7 @@ class AbstractProviderTest extends TestCase
 
     public function testIgnite()
     {
-        $response = new Response(200, [], 'yansongda/pay');
+        $response = new Response(200, [], 'duan617/pay');
         $rocket = new Rocket();
         $rocket->setRadar(new Request('get', ''));
 
@@ -71,12 +71,12 @@ class AbstractProviderTest extends TestCase
         $provider = new FooProviderStub();
         $result = $provider->ignite($rocket);
 
-        self::assertEquals('yansongda/pay', (string) $result->getDestination()->getBody());
+        self::assertEquals('duan617/pay', (string) $result->getDestination()->getBody());
     }
 
     public function testIgnitePreRead()
     {
-        $response = new Response(200, [], 'yansongda/pay');
+        $response = new Response(200, [], 'duan617/pay');
         $response->getBody()->read(1);
 
         $rocket = new Rocket();
@@ -90,7 +90,7 @@ class AbstractProviderTest extends TestCase
         $provider = new FooProviderStub();
         $result = $provider->ignite($rocket);
 
-        self::assertEquals('yansongda/pay', (string) $result->getDestination()->getBody());
+        self::assertEquals('duan617/pay', (string) $result->getDestination()->getBody());
     }
 
     public function testIgniteWrongHttpClient()
@@ -109,7 +109,7 @@ class AbstractProviderTest extends TestCase
 
     public function testArrayDirection()
     {
-        $response = new Response(200, [], '{"name":"yansongda"}');
+        $response = new Response(200, [], '{"name":"duan617"}');
 
         $http = Mockery::mock(Client::class);
         $http->shouldReceive('sendRequest')->andReturn($response);
@@ -187,7 +187,7 @@ class BarPlugin implements PluginInterface
 
         $rocket = $next($rocket);
 
-        $rocket->setDestination(new Collection(['name' => 'yansongda']));
+        $rocket->setDestination(new Collection(['name' => 'duan617']));
 
         return $rocket;
     }

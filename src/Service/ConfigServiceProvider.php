@@ -18,7 +18,7 @@ class ConfigServiceProvider implements ServiceProviderInterface
         'logger' => [
             'enable' => false,
             'file' => null,
-            'identify' => 'yansongda.pay',
+            'identify' => 'duan617.pay',
             'level' => 'debug',
             'type' => 'daily',
             'max_files' => 30,
@@ -27,7 +27,7 @@ class ConfigServiceProvider implements ServiceProviderInterface
             'timeout' => 5.0,
             'connect_timeout' => 3.0,
             'headers' => [
-                'User-Agent' => 'yansongda/pay-v3',
+                'User-Agent' => 'duan617/pay-v3',
             ],
         ],
         'mode' => Pay::MODE_NORMAL,

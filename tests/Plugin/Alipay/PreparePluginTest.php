@@ -33,7 +33,7 @@ class PreparePluginTest extends TestCase
         self::assertTrue($payload->has('app_cert_sn'));
         self::assertEquals('fb5e86cfb784de936dd3594e32381cf8', $payload->get('app_cert_sn'));
         self::assertEquals('687b59193f3f462dd5336e5abf83c5d8_02941eef3187dddf3d3b83462e1dfcf6', $payload->get('alipay_root_cert_sn'));
-        self::assertEquals('yansongda_token', $payload->get('app_auth_token'));
+        self::assertEquals('duan617_token', $payload->get('app_auth_token'));
     }
 
     public function testGlobalBcscale()
@@ -52,52 +52,52 @@ class PreparePluginTest extends TestCase
     {
         $rocket = new Rocket();
         $rocket->setParams([
-            '_return_url' => 'https://yansongda.cn',
+            '_return_url' => 'https://duan617.cn',
         ]);
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
         self::assertEquals('', $result->getPayload()->get('notify_url'));
-        self::assertEquals('https://yansongda.cn', $result->getPayload()->get('return_url'));
+        self::assertEquals('https://duan617.cn', $result->getPayload()->get('return_url'));
     }
 
     public function testCustomizedNotifyUrl()
     {
         $rocket = new Rocket();
         $rocket->setParams([
-            '_notify_url' => 'https://yansongda.cn',
+            '_notify_url' => 'https://duan617.cn',
         ]);
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
         self::assertEquals('', $result->getPayload()->get('return_url'));
-        self::assertEquals('https://yansongda.cn', $result->getPayload()->get('notify_url'));
+        self::assertEquals('https://duan617.cn', $result->getPayload()->get('notify_url'));
     }
 
     public function testCustomizedReturnNotifyUrl()
     {
         $rocket = new Rocket();
         $rocket->setParams([
-            '_return_url' => 'https://yansongda.cn',
-            '_notify_url' => 'https://yansongda.cn',
+            '_return_url' => 'https://duan617.cn',
+            '_notify_url' => 'https://duan617.cn',
         ]);
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
-        self::assertEquals('https://yansongda.cn', $result->getPayload()->get('return_url'));
-        self::assertEquals('https://yansongda.cn', $result->getPayload()->get('notify_url'));
+        self::assertEquals('https://duan617.cn', $result->getPayload()->get('return_url'));
+        self::assertEquals('https://duan617.cn', $result->getPayload()->get('notify_url'));
     }
 
     public function testCustomizedAppAuthToken()
     {
         $rocket = new Rocket();
         $rocket->setParams([
-            '_app_auth_token' => 'yansongda.cn',
+            '_app_auth_token' => 'duan617.cn',
         ]);
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
-        self::assertEquals('yansongda.cn', $result->getPayload()->get('app_auth_token'));
+        self::assertEquals('duan617.cn', $result->getPayload()->get('app_auth_token'));
     }
 
     public function testMissingAppPublicCertPath()

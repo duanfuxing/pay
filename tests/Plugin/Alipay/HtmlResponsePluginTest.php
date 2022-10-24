@@ -23,34 +23,34 @@ class HtmlResponsePluginTest extends TestCase
     public function testRedirect()
     {
         $rocket = new Rocket();
-        $rocket->setRadar(new Request('GET', 'https://yansongda.cn'))
-                ->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setRadar(new Request('GET', 'https://duan617.cn'))
+                ->setPayload(new Collection(['name' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
         self::assertInstanceOf(ResponseInterface::class, $result->getDestination());
         self::assertArrayHasKey('Location', $result->getDestination()->getHeaders());
-        self::assertEquals('https://yansongda.cn?name=yansongda', $result->getDestination()->getHeaderLine('Location'));
+        self::assertEquals('https://duan617.cn?name=duan617', $result->getDestination()->getHeaderLine('Location'));
     }
 
     public function testRedirectIncludeMark()
     {
         $rocket = new Rocket();
-        $rocket->setRadar(new Request('GET', 'https://yansongda.cn?charset=utf8'))
-            ->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setRadar(new Request('GET', 'https://duan617.cn?charset=utf8'))
+            ->setPayload(new Collection(['name' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
         self::assertInstanceOf(ResponseInterface::class, $result->getDestination());
         self::assertArrayHasKey('Location', $result->getDestination()->getHeaders());
-        self::assertEquals('https://yansongda.cn?charset=utf8&name=yansongda', $result->getDestination()->getHeaderLine('Location'));
+        self::assertEquals('https://duan617.cn?charset=utf8&name=duan617', $result->getDestination()->getHeaderLine('Location'));
     }
 
     public function testHtml()
     {
         $rocket = new Rocket();
-        $rocket->setRadar(new Request('POST', 'https://yansongda.cn'))
-            ->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setRadar(new Request('POST', 'https://duan617.cn'))
+            ->setPayload(new Collection(['name' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
@@ -58,6 +58,6 @@ class HtmlResponsePluginTest extends TestCase
 
         self::assertInstanceOf(ResponseInterface::class, $result->getDestination());
         self::assertStringContainsString('alipay_submit', $contents);
-        self::assertStringContainsString('yansongda', $contents);
+        self::assertStringContainsString('duan617', $contents);
     }
 }

@@ -13,11 +13,11 @@ class WechatGeneralPluginStub extends GeneralPlugin
 
     protected function getUri(Rocket $rocket): string
     {
-        return 'yansongda/pay';
+        return 'duan617/pay';
     }
 
     protected function getPartnerUri(Rocket $rocket): string
     {
-        return 'yansongda/pay/partner';
+        return 'duan617/pay/partner';
     }
 }

@@ -16,7 +16,7 @@ class SupportServiceProviderTraitTest extends TestCase
            'alipay' => [
                'default' => [
                    'mode' => Pay::MODE_SERVICE,
-                   'service_provider_id' => 'yansongda'
+                   'service_provider_id' => 'duan617'
                ]
            ]
         ]);
@@ -28,6 +28,6 @@ class SupportServiceProviderTraitTest extends TestCase
 
         self::assertStringContainsString('extend_params', $result);
         self::assertStringContainsString('sys_service_provider_id', $result);
-        self::assertStringContainsString('yansongda', $result);
+        self::assertStringContainsString('duan617', $result);
     }
 }

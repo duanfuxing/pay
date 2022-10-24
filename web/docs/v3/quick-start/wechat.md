@@ -1,9 +1,9 @@
 # 微信快速入门
 
-在初始化完毕后，就可以直接方便的享受 `yansongda/pay`  带来的便利了。
+在初始化完毕后，就可以直接方便的享受 `duan617/pay`  带来的便利了。
 
 :::tip
-`yansongda/pay` v3.x 版本直接支持 微信支付v3 版本，关于微信支付 v2/v3 版本区别，请参考[官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/index.shtml)
+`duan617/pay` v3.x 版本直接支持 微信支付v3 版本，关于微信支付 v2/v3 版本区别，请参考[官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/index.shtml)
 :::
 
 ## 公众号支付

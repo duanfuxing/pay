@@ -69,7 +69,7 @@ abstract class GeneralPlugin implements PluginInterface
     {
         return [
             'Accept' => 'application/json, text/plain, application/x-gzip',
-            'User-Agent' => 'yansongda/pay-v3',
+            'User-Agent' => 'duan617/pay-v3',
             'Content-Type' => 'application/json; charset=utf-8',
         ];
     }

@@ -23,7 +23,7 @@ class InvokePrepayPluginTest extends TestCase
 
     public function testNormal()
     {
-        $rocket = (new Rocket())->setDestination(new Collection(['prepay_id' => 'yansongda']));
+        $rocket = (new Rocket())->setDestination(new Collection(['prepay_id' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
@@ -36,7 +36,7 @@ class InvokePrepayPluginTest extends TestCase
         self::assertArrayHasKey('sign', $contents->all());
         self::assertArrayHasKey('timestamp', $contents->all());
         self::assertArrayHasKey('noncestr', $contents->all());
-        self::assertEquals('yansongda', $contents->get('appid'));
+        self::assertEquals('duan617', $contents->get('appid'));
     }
 
     public function testPartner()
@@ -44,7 +44,7 @@ class InvokePrepayPluginTest extends TestCase
         $rocket = (new Rocket())
             ->setParams(['_config' => 'service_provider4'])
             ->setPayload(new Collection(['sub_appid' => '123']))
-            ->setDestination(new Collection(['prepay_id' => 'yansongda']));
+            ->setDestination(new Collection(['prepay_id' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 

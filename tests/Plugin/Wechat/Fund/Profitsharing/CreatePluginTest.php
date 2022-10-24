@@ -72,7 +72,7 @@ class CreatePluginTest extends TestCase
         $params = [
             'receivers' => [
                 [
-                    'name' => 'yansongda'
+                    'name' => 'duan617'
                 ]
             ]
         ];
@@ -83,7 +83,7 @@ class CreatePluginTest extends TestCase
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
         $payload = $result->getPayload();
 
-        self::assertNotEquals('yansongda', $payload->get('receivers.0.name'));
+        self::assertNotEquals('duan617', $payload->get('receivers.0.name'));
         self::assertStringContainsString('==', $payload->get('receivers.0.name'));
     }
 }

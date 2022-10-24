@@ -1,18 +1,18 @@
 {
-    "name": "yansongda/pay",
+    "name": "duan617/pay",
     "description": "可能是我用过的最优雅的 Alipay 和 WeChat 的支付 SDK 扩展包了",
     "keywords": ["alipay", "wechat", "pay"],
     "type": "library",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/yansongda/pay/issues",
-        "source": "https://github.com/yansongda/pay",
+        "issues": "https://github.com/duan617/pay/issues",
+        "source": "https://github.com/duan617/pay",
         "homepage": "https://pay.yansongda.cn"
     },
     "authors": [
         {
-            "name": "yansongda",
-            "email": "me@yansongda.cn"
+            "name": "duan617",
+            "email": "1243702438@qq.com"
         }
     ],
     "require": {
@@ -27,7 +27,7 @@
         "psr/container": "^1.1 | ^2.0",
         "psr/http-client": "^1.0",
         "psr/http-message": "^1.0",
-        "yansongda/supports": "~3.2.0"
+        "duan617/supports": "~3.2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
@@ -43,7 +43,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yansongda\\Pay\\": "src"
+            "duan617\\Pay\\": "src"
         },
         "files": [
             "src/Functions.php"
@@ -51,7 +51,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Yansongda\\Pay\\Tests\\": "tests"
+            "duan617\\Pay\\Tests\\": "tests"
         }
     },
     "suggest": {

@@ -13,11 +13,11 @@ class CollectionParserTest extends TestCase
     {
         Pay::config([]);
 
-        $response = new Response(200, [], '{"name": "yansongda"}');
+        $response = new Response(200, [], '{"name": "duan617"}');
 
         $parser = new CollectionParser();
         $result = $parser->parse($response);
 
-        self::assertEquals(['name' => 'yansongda'], $result->all());
+        self::assertEquals(['name' => 'duan617'], $result->all());
     }
 }

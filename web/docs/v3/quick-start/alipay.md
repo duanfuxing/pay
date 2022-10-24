@@ -1,6 +1,6 @@
 # 支付宝快速入门
 
-在初始化完毕后，就可以直接方便的享受 `yansongda/pay`  带来的便利了。
+在初始化完毕后，就可以直接方便的享受 `duan617/pay`  带来的便利了。
 
 ## 网页支付
 
@@ -10,7 +10,7 @@ Pay::config($this->config);
 return Pay::alipay()->web([
     'out_trade_no' => ''.time(),
     'total_amount' => '0.01',
-    'subject' => 'yansongda 测试 - 1',
+    'subject' => 'duan617 测试 - 1',
 ]);
 ```
 
@@ -22,8 +22,8 @@ Pay::config($this->config);
 return Pay::alipay()->wap([
     'out_trade_no' => time(),
     'total_amount' => '0.01',
-    'subject' => 'yansongda 测试 - 01',
-    'quit_url' => 'https://yansongda.cn',
+    'subject' => 'duan617 测试 - 01',
+    'quit_url' => 'https://duan617.cn',
  ]);
 ```
 
@@ -35,7 +35,7 @@ Pay::config($this->config);
 return Pay::alipay()->app([
     'out_trade_no' => time(),
     'total_amount' => '0.01',
-    'subject' => 'yansongda 测试 - 01',
+    'subject' => 'duan617 测试 - 01',
 ]);
 ```
 
@@ -47,7 +47,7 @@ Pay::config($this->config);
 $result = Pay::alipay()->mini([
     'out_trade_no' => time().'',
     'total_amount' => '0.01',
-    'subject' => 'yansongda 测试 - 01',
+    'subject' => 'duan617 测试 - 01',
     'buyer_id' => '2088622190161234',
 ]);
 
@@ -64,7 +64,7 @@ $result = Pay::alipay()->pos([
     'out_trade_no' => time(),
     'auth_code' => '284776044441477959',
     'total_amount' => '0.01',
-    'subject' => 'yansongda 测试 - 01',
+    'subject' => 'duan617 测试 - 01',
 ]);
 ```
     
@@ -76,7 +76,7 @@ Pay::config($this->config);
 $result = Pay::alipay()->scan([
     'out_trade_no' => time(),
     'total_amount' => '0.01',
-    'subject' => 'yansongda 测试 - 01',
+    'subject' => 'duan617 测试 - 01',
 ]);
 
 return $result->qr_code; // 二维码 url

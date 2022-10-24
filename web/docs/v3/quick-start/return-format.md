@@ -1,6 +1,6 @@
 # 返回格式
 
-通过 `yansongda/pay` 调用任何方法最终只可能返回三种格式
+通过 `duan617/pay` 调用任何方法最终只可能返回三种格式
 
 - `\Psr\Http\Message\MessageInterface`
 - `\Yansongda\Supports\Collection`
@@ -44,7 +44,7 @@ ThinkPHP 框架在 [https://github.com/top-think/framework/pull/2614](https://gi
 默认情况下，支付宝、微信所有 API 调用场景下绝大多数方法最终都返回的是 `Collection` 实例。
 例如常用的「退款」「转账」「小程序支付」等。
 
-`Collection` 类提供了常用的快捷方法，具体 API 可参考源代码 [yansongda/supports](https://github.com/yansongda/supports)
+`Collection` 类提供了常用的快捷方法，具体 API 可参考源代码 [duan617/supports](https://github.com/duan617/supports)
 
 ## array
 

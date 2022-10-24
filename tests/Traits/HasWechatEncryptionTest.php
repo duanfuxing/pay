@@ -31,12 +31,12 @@ class HasWechatEncryptionTest extends TestCase
         // 不传证书
         $params = [];
         $result = $this->trait->loadSerialNo($params);
-        self::assertTrue(in_array($result['_serial_no'], ['45F59D4DABF31918AFCEC556D5D2C6E376675D57', 'yansongda']));
+        self::assertTrue(in_array($result['_serial_no'], ['45F59D4DABF31918AFCEC556D5D2C6E376675D57', 'duan617']));
 
         // 传证书
-        $params = ['_serial_no' => 'yansongda',];
+        $params = ['_serial_no' => 'duan617',];
         $result = $this->trait->loadSerialNo($params);
-        self::assertEquals('yansongda', $result['_serial_no']);
+        self::assertEquals('duan617', $result['_serial_no']);
     }
 
     public function testLoadSerialNoWithRequestWechat()

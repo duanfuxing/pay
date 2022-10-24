@@ -23,8 +23,8 @@ class HtmlResponsePluginTest extends TestCase
     public function testHtml()
     {
         $rocket = new Rocket();
-        $rocket->setRadar(new Request('POST', 'https://yansongda.cn'))
-            ->setPayload(new Collection(['name' => 'yansongda']));
+        $rocket->setRadar(new Request('POST', 'https://duan617.cn'))
+            ->setPayload(new Collection(['name' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
@@ -32,6 +32,6 @@ class HtmlResponsePluginTest extends TestCase
 
         self::assertInstanceOf(ResponseInterface::class, $result->getDestination());
         self::assertStringContainsString('pay_form', $contents);
-        self::assertStringContainsString('yansongda', $contents);
+        self::assertStringContainsString('duan617', $contents);
     }
 }

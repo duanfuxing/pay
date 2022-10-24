@@ -17,7 +17,7 @@ class GeneralPayPluginTest extends TestCase
 
         $result = $plugin->assembly($rocket, function ($rocket) { return $rocket; });
 
-        self::assertStringContainsString('yansongda', $result->getPayload()->toJson());
+        self::assertStringContainsString('duan617', $result->getPayload()->toJson());
     }
 }
 

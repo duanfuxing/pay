@@ -1,6 +1,6 @@
 # 快速入门
 
-该文档为 v2.x 版本，如果您想找 v1.x 版本文档，请点击[https://github.com/yansongda/pay/tree/v1](https://github.com/yansongda/pay/tree/v1)
+该文档为 v2.x 版本，如果您想找 v1.x 版本文档，请点击[https://github.com/duan617/pay/tree/v1](https://github.com/duan617/pay/tree/v1)
 
 **注意：v1.x 与 v2.x 版本不兼容**
 
@@ -10,7 +10,7 @@
 
 欢迎 Star，欢迎 PR！
 
-laravel 扩展包请 [https://github.com/yansongda/laravel-pay](https://github.com/yansongda/laravel-pay)
+laravel 扩展包请 [https://github.com/duan617/laravel-pay](https://github.com/duan617/laravel-pay)
 
 QQ交流群：690027516
 

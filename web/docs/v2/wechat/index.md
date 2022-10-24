@@ -101,7 +101,7 @@ $config = [
 
 **说明：** 处于服务商模式下的时候，`appid`、`app_id`、`miniapp_id` 均为**主商户**的信息，`sub_` 开头的为**子服务商**的信息
 
-详细请参考 [https://github.com/yansongda/pay/pull/82](https://github.com/yansongda/pay/pull/82)
+详细请参考 [https://github.com/duan617/pay/pull/82](https://github.com/duan617/pay/pull/82)
 
 
 ## 注意

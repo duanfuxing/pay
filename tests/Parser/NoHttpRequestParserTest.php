@@ -10,7 +10,7 @@ class NoHttpRequestParserTest extends TestCase
 {
     public function testNormal()
     {
-        $response = new Response(200, [], '{"name": "yansongda"}');
+        $response = new Response(200, [], '{"name": "duan617"}');
 
         $parser = new NoHttpRequestParser();
         $result = $parser->parse($response);

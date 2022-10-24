@@ -23,7 +23,7 @@ class LoggerServiceProvider implements ServiceProviderInterface
 
         if (class_exists(\Monolog\Logger::class) && true === $config->get('logger.enable', false)) {
             $logger = new Logger(array_merge(
-                ['identify' => 'yansongda.pay'], $config->get('logger', [])
+                ['identify' => 'duan617.pay'], $config->get('logger', [])
             ));
 
             Pay::set(LoggerInterface::class, $logger);

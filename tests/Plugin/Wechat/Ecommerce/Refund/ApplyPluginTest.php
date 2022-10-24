@@ -72,7 +72,7 @@ class ApplyPluginTest extends TestCase
     {
         $rocket = new Rocket();
         $rocket->setParams(['_config' => 'service_provider'])->setPayload(new Collection([
-            'test' => 'yansongda',
+            'test' => 'duan617',
             'sub_mchid' => '123',
             'sp_appid' => '456',
         ]));
@@ -86,7 +86,7 @@ class ApplyPluginTest extends TestCase
         self::assertEquals(new Uri(Wechat::URL[Pay::MODE_NORMAL].'v3/ecommerce/refunds/apply'), $radar->getUri());
         self::assertEquals('456', $payload->get('sp_appid'));
         self::assertEquals('123', $payload->get('sub_mchid'));
-        self::assertEquals('yansongda', $payload->get('test'));
+        self::assertEquals('duan617', $payload->get('test'));
         self::assertCount(4, $payload->all());
     }
 
@@ -94,7 +94,7 @@ class ApplyPluginTest extends TestCase
     {
         $rocket = new Rocket();
         $rocket->setParams(['_config' => 'service_provider', '_type' => 'mini'])->setPayload(new Collection([
-            'test' => 'yansongda',
+            'test' => 'duan617',
         ]));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) {return $rocket; });
@@ -106,7 +106,7 @@ class ApplyPluginTest extends TestCase
         self::assertEquals(new Uri(Wechat::URL[Pay::MODE_NORMAL].'v3/ecommerce/refunds/apply'), $radar->getUri());
         self::assertEquals('wx55955316af4ef14', $payload->get('sp_appid'));
         self::assertEquals('1600314070', $payload->get('sub_mchid'));
-        self::assertEquals('yansongda', $payload->get('test'));
+        self::assertEquals('duan617', $payload->get('test'));
         self::assertCount(4, $payload->all());
     }
 }

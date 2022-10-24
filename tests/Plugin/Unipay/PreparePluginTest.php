@@ -28,17 +28,17 @@ class PreparePluginTest extends TestCase
         $params = [
             'txnTime' => '20220903065448',
             'txnAmt' => 1,
-            'orderId' => 'yansongda20220903065448',
+            'orderId' => 'duan61720220903065448',
         ];
         $payload = array_merge($params, [
             'version' => '5.1.0',
             'encoding' => 'utf-8',
-            'backUrl' => 'https://yansongda.cn/unipay/notify',
+            'backUrl' => 'https://duan617.cn/unipay/notify',
             'accessType' => '0',
             'signature' => '',
             'signMethod' => '01',
             'merId' => '777290058167151',
-            'frontUrl' => 'https://yansongda.cn/unipay/return',
+            'frontUrl' => 'https://duan617.cn/unipay/return',
             'certId' => '69903319369',
             'currencyCode' => '156',
         ]);

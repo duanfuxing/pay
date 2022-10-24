@@ -70,7 +70,7 @@ class AddReceiverPluginTest extends TestCase
     public function testEncryptName()
     {
         $params = [
-            'name' => 'yansongda',
+            'name' => 'duan617',
         ];
 
         $rocket = new Rocket();
@@ -79,7 +79,7 @@ class AddReceiverPluginTest extends TestCase
         $result = $this->plugin->assembly($rocket, function ($rocket) {return $rocket;});
         $payload = $result->getPayload();
 
-        self::assertNotEquals('yansongda', $payload->get('name'));
+        self::assertNotEquals('duan617', $payload->get('name'));
         self::assertStringContainsString('==', $payload->get('name'));
     }
 }

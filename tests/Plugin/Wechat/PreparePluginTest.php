@@ -23,7 +23,7 @@ class PreparePluginTest extends TestCase
     public function testNormal()
     {
         $params = [
-            'name' => 'yansongda',
+            'name' => 'duan617',
             '_aaa' => 'aaa',
         ];
 
@@ -32,7 +32,7 @@ class PreparePluginTest extends TestCase
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
         $payload = $result->getPayload()->all();
 
-        self::assertEquals('yansongda', $payload['name']);
+        self::assertEquals('duan617', $payload['name']);
         self::assertArrayNotHasKey('aaa', $payload);
         self::assertArrayNotHasKey('_aaa', $payload);
     }

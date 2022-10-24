@@ -72,7 +72,7 @@ abstract class GeneralPlugin implements PluginInterface
     protected function getHeaders(): array
     {
         return [
-            'User-Agent' => 'yansongda/pay-v3',
+            'User-Agent' => 'duan617/pay-v3',
             'Content-Type' => 'application/x-www-form-urlencoded;charset=utf-8',
         ];
     }

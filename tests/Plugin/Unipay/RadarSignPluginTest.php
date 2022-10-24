@@ -27,11 +27,11 @@ class RadarSignPluginTest extends TestCase
         $params = [
             'txnTime' => '20220903065448',
             'txnAmt' => 1,
-            'orderId' => 'yansongda20220903065448',
+            'orderId' => 'duan61720220903065448',
             'version' => '5.1.0',
             'encoding' => 'utf-8',
             'bizType' => '000201',
-            'backUrl' => 'https://yansongda.cn/unipay/notify',
+            'backUrl' => 'https://duan617.cn/unipay/notify',
             'currencyCode' => '156',
             'txnType' => '01',
             'txnSubType' => '01',
@@ -40,11 +40,11 @@ class RadarSignPluginTest extends TestCase
             'signMethod' => '01',
             'channelType' => '07',
             'merId' => '777290058167151',
-            'frontUrl' => 'https://yansongda.cn/unipay/return',
+            'frontUrl' => 'https://duan617.cn/unipay/return',
             'certId' => '69903319369',
         ];
 
-        $rocket = (new Rocket())->setPayload(new Collection($params))->setRadar(new Request('GET', 'https://yansongda.cn'));
+        $rocket = (new Rocket())->setPayload(new Collection($params))->setRadar(new Request('GET', 'https://duan617.cn'));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) { return $rocket; });
         $payload = $result->getPayload();

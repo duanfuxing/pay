@@ -27,13 +27,13 @@ class QueryComplaintsPluginTest extends TestCase
     public function testNormal()
     {
         $rocket = new Rocket();
-        $rocket->setParams([])->setPayload(new Collection(['foo' => 'bar', 'name' => 'yansongda']));
+        $rocket->setParams([])->setPayload(new Collection(['foo' => 'bar', 'name' => 'duan617']));
 
         $result = $this->plugin->assembly($rocket, function ($rocket) {return $rocket;});
 
         $radar = $result->getRadar();
 
-        self::assertEquals(new Uri(Wechat::URL[Pay::MODE_NORMAL].'v3/merchant-service/complaints-v2?foo=bar&name=yansongda'), $radar->getUri());
+        self::assertEquals(new Uri(Wechat::URL[Pay::MODE_NORMAL].'v3/merchant-service/complaints-v2?foo=bar&name=duan617'), $radar->getUri());
         self::assertNull($rocket->getPayload());
         self::assertEquals('GET', $radar->getMethod());
     }

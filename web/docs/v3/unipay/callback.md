@@ -19,7 +19,7 @@ $result = Pay::unipay()->callback();
 
 #### `null`
 
-如果您没有传参，或传 `null` 则 `yansongda/pay` 会自动识别支付宝的回调请求并处理，通过 `Collection` 实例返回支付宝的处理参数
+如果您没有传参，或传 `null` 则 `duan617/pay` 会自动识别支付宝的回调请求并处理，通过 `Collection` 实例返回支付宝的处理参数
 
 :::warning
 建议仅在 php-fpm 下使用，swoole 方式请使用 `ServerRequestInterface` 参数传递方式
@@ -27,7 +27,7 @@ $result = Pay::unipay()->callback();
 
 #### `ServerRequestInterface`
 
-推荐在 swoole 环境下传递此参数，传递此参数后， yansongda/pay 会自动进行后续处理
+推荐在 swoole 环境下传递此参数，传递此参数后， duan617/pay 会自动进行后续处理
 
 #### `array`
 
@@ -37,4 +37,4 @@ $result = Pay::unipay()->callback();
 
 第二个参数主要是传递相关自定义变量的，类似于 `web()` 中的 `_config` / `_method` 等参数。
 
-例如，如果你想在回调的时候使用非默认配置，则可以 `Pay::unipay()->callback(null, ['_config' => 'yansongda'])` 切换为 `yansongda` 这个租户的配置信息。
+例如，如果你想在回调的时候使用非默认配置，则可以 `Pay::unipay()->callback(null, ['_config' => 'duan617'])` 切换为 `duan617` 这个租户的配置信息。

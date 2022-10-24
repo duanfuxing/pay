@@ -8,11 +8,11 @@
 
 ## Issue（推荐）
 
-[https://github.com/yansongda/pay/issues](https://github.com/yansongda/pay/issues)
+[https://github.com/duan617/pay/issues](https://github.com/duan617/pay/issues)
 
 ## Discuss（推荐）
 
-[https://github.com/yansongda/pay/discussions](https://github.com/yansongda/pay/discussions)
+[https://github.com/duan617/pay/discussions](https://github.com/duan617/pay/discussions)
 
 ## QQ 群
 

@@ -23,7 +23,7 @@ SDK 自带日志系统，如果需要指定日志文件或日志级别，请 con
 
 ### 使用外部日志系统
 
-yansongda/pay 支持使用外部日志系统，只需要日志规范支持 PSR3 规范，实现了 `\Psr\Log\LoggerInterface` 即可。
+duan617/pay 支持使用外部日志系统，只需要日志规范支持 PSR3 规范，实现了 `\Psr\Log\LoggerInterface` 即可。
 
 ```php
 use Yansongda\Pay\Contract\LoggerInterface;

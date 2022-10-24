@@ -65,7 +65,7 @@ class FunctionTest extends TestCase
     public function testGetTenant()
     {
         self::assertEquals('default', get_tenant([]));
-        self::assertEquals('yansongda', get_tenant(['_config' => 'yansongda']));
+        self::assertEquals('duan617', get_tenant(['_config' => 'duan617']));
     }
 
     public function testGetAlipayConfig()
@@ -76,12 +76,12 @@ class FunctionTest extends TestCase
 
         $config2 = [
             'alipay' => [
-                'default' => ['name' => 'yansongda'],
+                'default' => ['name' => 'duan617'],
                 'c1' => ['age' => 28]
             ]
         ];
         Pay::config($config2);
-        self::assertEquals(['name' => 'yansongda'], get_alipay_config([]));
+        self::assertEquals(['name' => 'duan617'], get_alipay_config([]));
 
         self::assertEquals(['age' => 28], get_alipay_config(['_config' => 'c1']));
     }
@@ -112,7 +112,7 @@ class FunctionTest extends TestCase
             "buyer_user_id" => "2088102174698127",
             "buyer_user_type" => "PRIVATE",
             "invoice_amount" => "0.00",
-            "out_trade_no" => "yansongda-1622986519",
+            "out_trade_no" => "duan617-1622986519",
             "point_amount" => "0.00",
             "receipt_amount" => "0.00",
             "send_pay_date" => "2021-06-06 21:35:40",
@@ -143,12 +143,12 @@ class FunctionTest extends TestCase
 
         $config2 = [
             'wechat' => [
-                'default' => ['name' => 'yansongda'],
+                'default' => ['name' => 'duan617'],
                 'c1' => ['age' => 28]
             ]
         ];
         Pay::config(array_merge($config2, ['_force' => true]));
-        self::assertEquals(['name' => 'yansongda'], get_wechat_config([]));
+        self::assertEquals(['name' => 'duan617'], get_wechat_config([]));
 
         self::assertEquals(['age' => 28], get_wechat_config(['_config' => 'c1']));
     }
@@ -158,18 +158,18 @@ class FunctionTest extends TestCase
         self::assertEquals(Wechat::URL[Pay::MODE_NORMAL], get_wechat_base_uri([]));
 
         $config2 = ['_force' => true, 'wechat' => [
-            'yansongda' => ['mode' => Pay::MODE_SANDBOX]
+            'duan617' => ['mode' => Pay::MODE_SANDBOX]
         ]];
         Pay::config($config2);
 
-        self::assertEquals(Wechat::URL[Pay::MODE_SANDBOX], get_wechat_base_uri(['_config' => 'yansongda']));
+        self::assertEquals(Wechat::URL[Pay::MODE_SANDBOX], get_wechat_base_uri(['_config' => 'duan617']));
     }
 
     public function testGetWechatSign()
     {
         $params = [
             'out_trade_no' => 1626493236,
-            'description' => 'yansongda 测试 - 1626493236',
+            'description' => 'duan617 测试 - 1626493236',
             'amount' => [
                 'total' => 1,
             ],
@@ -179,7 +179,7 @@ class FunctionTest extends TestCase
                     'type' => 'Wap',
                 ]
             ]];
-        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"yansongda 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
+        $contents = "POST\n/v3/pay/transactions/h5\n1626493236\nQqtzdVzxavZeXag9G5mtfzbfzFMf89p6\n{\"out_trade_no\":1626493236,\"description\":\"duan617 测试 - 1626493236\",\"amount\":{\"total\":1},\"scene_info\":{\"payer_client_ip\":\"127.0.0.1\",\"h5_info\":{\"type\":\"Wap\"}},\"appid\":\"wx55955316af4ef13\",\"mchid\":\"1600314069\",\"notify_url\":\"http:\/\/127.0.0.1:8000\/wechat\/notify\"}\n";
 
         self::assertEquals(
             'KzIgMgiop3nQJNdBVR2Xah/JUwVBLDFFajyXPiSN8b8YAYEA4FuWfaCgFJ52+WFed+PhOYWx/ZPih4RaEuuSdYB8eZwYUx7RZGMQZk0bKCctAjjPuf4pJN+f/WsXKjPIy3diqF5x7gyxwSCaKWP4/KjsHNqgQpiC8q1uC5xmElzuhzSwj88LIoLtkAuSmtUVvdAt0Nz41ECHZgHWSGR32TfBo902r8afdaVKkFde8IoqcEJJcp6sMxdDO5l9R5KEWxrJ1SjsXVrb0IPH8Nj7e6hfhq7pucxojPpzsC+ZWAYvufZkAQx3kTiFmY87T+QhkP9FesOfWvkIRL4E6MP6ug==',
@@ -238,7 +238,7 @@ class FunctionTest extends TestCase
     public function testEncryptWechatContents()
     {
         $serialNo = '45F59D4DABF31918AFCEC556D5D2C6E376675D57';
-        $contents = 'yansongda';
+        $contents = 'duan617';
         $result = encrypt_wechat_contents($contents, get_wechat_config([])['wechat_public_cert_path'][$serialNo]);
         self::assertIsString($result);
     }
@@ -313,19 +313,19 @@ class FunctionTest extends TestCase
 
         $config2 = [
             'unipay' => [
-                'default' => ['name' => 'yansongda'],
+                'default' => ['name' => 'duan617'],
                 'c1' => ['age' => 28]
             ]
         ];
         Pay::config($config2);
-        self::assertEquals(['name' => 'yansongda'], get_unipay_config([]));
+        self::assertEquals(['name' => 'duan617'], get_unipay_config([]));
 
         self::assertEquals(['age' => 28], get_unipay_config(['_config' => 'c1']));
     }
 
     public function testVerifyUnipaySign()
     {
-        $contents = "accNo=ORRSXWY1kMr8UJNxGx9xKPuO0Uhm8JT8aQV3sWswJfIsj/grkjauH4soyAtiqB9XwQotZOwmUAs/pkMupUkfiX9npdFGGEUEc5gqq+lcEwyD7tLmd2WBzRvcEvvjAKMKwTCFDxmQbIrP48ocIVhPoZ87ZQtQM5MIyJYedrzPRlt6BzRddUPGU1gJwDA8APDx3iyNl8EAfenJw7DUDZimmhbE1VSRmQm/iqgJurI7juq/6ztDHZHv4ys1eN9JYkwhcKxCjsWpwXTSy0PGvDXhsAZsDuNXHsjI8JLhHXvTDaU2+gc289LZPiwpr4Ah/reIuPWrIHubchYm2XTqQlUAaw==&accessType=0&bizType=000201&currencyCode=156&encoding=utf-8&exchangeRate=0&merId=777290058167151&orderId=yansongda20220908132206&queryId=782209081322060674028&respCode=00&respMsg=success&settleAmt=1&settleCurrencyCode=156&settleDate=0908&signMethod=01&signPubKeyCert=-----BEGIN CERTIFICATE-----\r
+        $contents = "accNo=ORRSXWY1kMr8UJNxGx9xKPuO0Uhm8JT8aQV3sWswJfIsj/grkjauH4soyAtiqB9XwQotZOwmUAs/pkMupUkfiX9npdFGGEUEc5gqq+lcEwyD7tLmd2WBzRvcEvvjAKMKwTCFDxmQbIrP48ocIVhPoZ87ZQtQM5MIyJYedrzPRlt6BzRddUPGU1gJwDA8APDx3iyNl8EAfenJw7DUDZimmhbE1VSRmQm/iqgJurI7juq/6ztDHZHv4ys1eN9JYkwhcKxCjsWpwXTSy0PGvDXhsAZsDuNXHsjI8JLhHXvTDaU2+gc289LZPiwpr4Ah/reIuPWrIHubchYm2XTqQlUAaw==&accessType=0&bizType=000201&currencyCode=156&encoding=utf-8&exchangeRate=0&merId=777290058167151&orderId=duan61720220908132206&queryId=782209081322060674028&respCode=00&respMsg=success&settleAmt=1&settleCurrencyCode=156&settleDate=0908&signMethod=01&signPubKeyCert=-----BEGIN CERTIFICATE-----\r
 MIIEYzCCA0ugAwIBAgIFEDkwhTQwDQYJKoZIhvcNAQEFBQAwWDELMAkGA1UEBhMC\r
 Q04xMDAuBgNVBAoTJ0NoaW5hIEZpbmFuY2lhbCBDZXJ0aWZpY2F0aW9uIEF1dGhv\r
 cml0eTEXMBUGA1UEAxMOQ0ZDQSBURVNUIE9DQTEwHhcNMjAwNzMxMDExOTE2WhcN\r

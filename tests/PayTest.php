@@ -35,21 +35,21 @@ class PayTest extends TestCase
 
     public function testConfig()
     {
-        $result = Pay::config(['name' => 'yansongda']);
+        $result = Pay::config(['name' => 'duan617']);
         self::assertTrue($result);
-        self::assertEquals('yansongda', Pay::get(ConfigInterface::class)->get('name'));
+        self::assertEquals('duan617', Pay::get(ConfigInterface::class)->get('name'));
 
         // force
-        $result1 = Pay::config(['name' => 'yansongda1', '_force' => true]);
+        $result1 = Pay::config(['name' => 'duan6171', '_force' => true]);
         self::assertTrue($result1);
-        self::assertEquals('yansongda1', Pay::get(ConfigInterface::class)->get('name'));
+        self::assertEquals('duan6171', Pay::get(ConfigInterface::class)->get('name'));
 
         // 直接使用 config 去设置 container
         if (class_exists(Container::class)) {
             // container - closure
             Pay::clear();
             $container2 = (new ContainerBuilder())->build();
-            $result2 = Pay::config(['name' => 'yansongda2'], function () use ($container2) {
+            $result2 = Pay::config(['name' => 'duan6172'], function () use ($container2) {
                 return $container2;
             });
             self::assertTrue($result2);
@@ -58,7 +58,7 @@ class PayTest extends TestCase
             // container - object
             Pay::clear();
             $container3 = (new ContainerBuilder())->build();
-            $result3 = Pay::config(['name' => 'yansongda2'], $container3);
+            $result3 = Pay::config(['name' => 'duan6172'], $container3);
             self::assertTrue($result3);
             self::assertSame($container3, Pay::getContainer());
 
@@ -66,7 +66,7 @@ class PayTest extends TestCase
             Pay::clear();
             $container4 = (new ContainerBuilder())->build();
             Pay::setContainer($container4);
-            $result4 = Pay::config(['name' => 'yansongda2', '_force' => true]);
+            $result4 = Pay::config(['name' => 'duan6172', '_force' => true]);
             self::assertTrue($result4);
             self::assertSame($container4, Pay::getContainer());
         }
@@ -88,7 +88,7 @@ class PayTest extends TestCase
 
     public function testSetAndGet()
     {
-        Pay::config(['name' => 'yansongda']);
+        Pay::config(['name' => 'duan617']);
 
         Pay::set('age', 28);
 
@@ -97,7 +97,7 @@ class PayTest extends TestCase
 
     public function testHas()
     {
-        Pay::config(['name' => 'yansongda']);
+        Pay::config(['name' => 'duan617']);
 
         Pay::set('age', 28);
 
@@ -107,7 +107,7 @@ class PayTest extends TestCase
 
     public function testGetContainerAndClear()
     {
-        Pay::config(['name' => 'yansongda']);
+        Pay::config(['name' => 'duan617']);
         self::assertInstanceOf(ContainerInterface::class, Pay::getContainer());
 
         Pay::clear();
@@ -121,13 +121,13 @@ class PayTest extends TestCase
 
     public function testMakeService()
     {
-        Pay::config(['name' => 'yansongda']);
+        Pay::config(['name' => 'duan617']);
         self::assertNotSame(Pay::make(Pipeline::class), Pay::make(Pipeline::class));
     }
 
     public function testRegisterService()
     {
-        Pay::config(['name' => 'yansongda']);
+        Pay::config(['name' => 'duan617']);
 
         Pay::registerService(FooServiceProviderStub::class, []);
 
@@ -143,7 +143,7 @@ class PayTest extends TestCase
 
     public function testCoreServiceContainer()
     {
-        Pay::config(['name' => 'yansongda']);
+        Pay::config(['name' => 'duan617']);
 
         // 单在 hyperf 框架内没有 container，所以手动设置一个
         if (class_exists(Container::class) && class_exists(ApplicationContext::class)) {
@@ -155,7 +155,7 @@ class PayTest extends TestCase
 
     public function testCoreServiceConfig()
     {
-        $config = ['name' => 'yansongda'];
+        $config = ['name' => 'duan617'];
         Pay::config($config);
 
         self::assertInstanceOf(Config::class, Pay::get(ConfigInterface::class));
@@ -163,7 +163,7 @@ class PayTest extends TestCase
 
         // 修改 config 的情况
         $config2 = [
-            'name' => 'yansongda2',
+            'name' => 'duan6172',
         ];
         Pay::set(ConfigInterface::class, new Config($config2));
 
@@ -172,7 +172,7 @@ class PayTest extends TestCase
 
     public function testCoreServiceLogger()
     {
-        $config = ['name' => 'yansongda','logger' => ['enable' => true]];
+        $config = ['name' => 'duan617','logger' => ['enable' => true]];
         Pay::config($config);
 
         self::assertInstanceOf(Logger::class, Pay::get(LoggerInterface::class));
@@ -184,7 +184,7 @@ class PayTest extends TestCase
 
     public function testCoreServiceEvent()
     {
-        $config = ['name' => 'yansongda'];
+        $config = ['name' => 'duan617'];
         Pay::config($config);
 
         self::assertInstanceOf(EventDispatcher::class, Pay::get(EventDispatcherInterface::class));
@@ -192,7 +192,7 @@ class PayTest extends TestCase
 
     public function testCoreServiceHttpClient()
     {
-        $config = ['name' => 'yansongda'];
+        $config = ['name' => 'duan617'];
         Pay::config($config);
 
         self::assertInstanceOf(Client::class, Pay::get(HttpClientInterface::class));

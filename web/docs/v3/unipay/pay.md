@@ -21,7 +21,7 @@ Pay::config($this->config);
 return Pay::unipay()->web([
     'txnTime' => date('YmdHis'),
     'txnAmt' => 1,
-    'orderId' => 'yansongda'.date('YmdHis'),
+    'orderId' => 'duan617'.date('YmdHis'),
 ]);
 ```
 
@@ -41,7 +41,7 @@ Pay::config($this->config);
 return Pay::unipay()->wap([
     'txnTime' => date('YmdHis'),
     'txnAmt' => 1,
-    'orderId' => 'yansongda'.date('YmdHis'),
+    'orderId' => 'duan617'.date('YmdHis'),
  ]);
 ```
 

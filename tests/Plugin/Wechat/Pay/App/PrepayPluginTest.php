@@ -30,7 +30,7 @@ class PrepayPluginTest extends TestCase
 
         $payload = $result->getPayload();
 
-        self::assertEquals('yansongda', $payload->get('appid'));
+        self::assertEquals('duan617', $payload->get('appid'));
         self::assertEquals('1600314069', $payload->get('mchid'));
     }
 
@@ -43,7 +43,7 @@ class PrepayPluginTest extends TestCase
 
         $payload = $result->getPayload();
 
-        self::assertEquals('yansongda', $payload->get('appid'));
+        self::assertEquals('duan617', $payload->get('appid'));
         self::assertEquals('1600314069', $payload->get('mchid'));
     }
 
