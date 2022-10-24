@@ -89,7 +89,7 @@ duan617/pay 100% 兼容 支付宝/微信/银联 所有功能（包括服务商�
 
 ## 安装
 ```shell
-composer require duan617/pay:~3.2.0 -vvv
+composer require duan617/pay:v1.0.0 -vvv
 ```
 
 ## 深情一撇
