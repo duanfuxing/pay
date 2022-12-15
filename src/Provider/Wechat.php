@@ -48,7 +48,7 @@ class Wechat extends AbstractProvider
      */
     public function __call(string $shortcut, array $params)
     {
-        $plugin = '\\Yansongda\\Pay\\Plugin\\Wechat\\Shortcut\\'.
+        $plugin = '\\duan617\\Pay\\Plugin\\Wechat\\Shortcut\\'.
             Str::studly($shortcut).'Shortcut';
 
         return $this->call($plugin, ...$params);

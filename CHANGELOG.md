@@ -154,7 +154,7 @@
 ### dependency
 
 - delete: 移除 `php-di/php-di` 依赖。如果您使用的框架非 `hyperf`, `laravel` 或 没有指定 `ContainerInterface`，仍需手动安装 `composer require php-di/php-di`
-- delete: 移除 `guzzlehttp/guzzle` 依赖。如果没有指定 `\Yansongda\Pay\Contract\HttpClientInterface` 仍需手动安装 `composer require guzzlehttp/guzzle`
+- delete: 移除 `guzzlehttp/guzzle` 依赖。如果没有指定 `\duan617\Pay\Contract\HttpClientInterface` 仍需手动安装 `composer require guzzlehttp/guzzle`
 - upgrade: 升级 `duan617/supports` 到 `~v3.2.0`
 - upgrade: 升级 `php` 最低版本到 `7.4.0`
 

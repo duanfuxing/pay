@@ -100,7 +100,7 @@ composer require duan617/pay:v1.0.0 -vvv
 
 namespace App\Http\Controllers;
 
-use Yansongda\Pay\Pay;
+use duan617\Pay\Pay;
 
 class AlipayController
 {
@@ -187,7 +187,7 @@ class AlipayController
 
 namespace App\Http\Controllers;
 
-use Yansongda\Pay\Pay;
+use duan617\Pay\Pay;
 
 class WechatController
 {
