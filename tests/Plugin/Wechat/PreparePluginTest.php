@@ -1,15 +1,15 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat;
+namespace duan617\Pay\Tests\Plugin\Wechat;
 
-use Yansongda\Pay\Plugin\Wechat\PreparePlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Plugin\Wechat\PreparePlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 
 class PreparePluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\PreparePlugin
+     * @var \duan617\Pay\Plugin\Wechat\PreparePlugin
      */
     protected $plugin;
 

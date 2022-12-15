@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Trade;
+namespace duan617\Pay\Plugin\Alipay\Trade;
 
-use Yansongda\Pay\Plugin\Alipay\GeneralPlugin;
+use duan617\Pay\Plugin\Alipay\GeneralPlugin;
 
 /**
  * @see https://opendocs.alipay.com/open/02ekfk

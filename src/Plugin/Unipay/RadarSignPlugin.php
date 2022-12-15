@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Unipay;
+namespace duan617\Pay\Plugin\Unipay;
 
 use Closure;
 use GuzzleHttp\Psr7\Utils;
-use Yansongda\Pay\Contract\PluginInterface;
+use duan617\Pay\Contract\PluginInterface;
 
-use function Yansongda\Pay\get_unipay_config;
+use function duan617\Pay\get_unipay_config;
 
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Traits\GetUnipayCerts;
+use duan617\Pay\Logger;
+use duan617\Pay\Rocket;
+use duan617\Pay\Traits\GetUnipayCerts;
 use Yansongda\Supports\Collection;
 
 class RadarSignPlugin implements PluginInterface
@@ -20,9 +20,9 @@ class RadarSignPlugin implements PluginInterface
     use GetUnipayCerts;
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -38,9 +38,9 @@ class RadarSignPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function sign(Rocket $rocket): void
     {
@@ -65,9 +65,9 @@ class RadarSignPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getConfig(array $params): array
     {

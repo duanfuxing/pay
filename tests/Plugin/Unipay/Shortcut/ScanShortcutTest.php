@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Tests\Plugin\Unipay\Shortcut;
+namespace duan617\Pay\Tests\Plugin\Unipay\Shortcut;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Plugin\Unipay\QrCode\ScanFeePlugin;
-use Yansongda\Pay\Plugin\Unipay\QrCode\ScanNormalPlugin;
-use Yansongda\Pay\Plugin\Unipay\QrCode\ScanPreAuthPlugin;
-use Yansongda\Pay\Plugin\Unipay\QrCode\ScanPreOrderPlugin;
-use Yansongda\Pay\Plugin\Unipay\Shortcut\ScanShortcut;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Plugin\Unipay\QrCode\ScanFeePlugin;
+use duan617\Pay\Plugin\Unipay\QrCode\ScanNormalPlugin;
+use duan617\Pay\Plugin\Unipay\QrCode\ScanPreAuthPlugin;
+use duan617\Pay\Plugin\Unipay\QrCode\ScanPreOrderPlugin;
+use duan617\Pay\Plugin\Unipay\Shortcut\ScanShortcut;
+use duan617\Pay\Tests\TestCase;
 
 class ScanShortcutTest extends TestCase
 {

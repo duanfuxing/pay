@@ -1,6 +1,6 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Stubs\Plugin;
+namespace duan617\Pay\Tests\Stubs\Plugin;
 
 class FooPluginStub
 {

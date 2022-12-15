@@ -1,17 +1,17 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Pay\Mini;
+namespace duan617\Pay\Tests\Plugin\Wechat\Pay\Mini;
 
-use Yansongda\Pay\Plugin\Wechat\Pay\Mini\InvokePrepayPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Plugin\Wechat\Pay\Mini\InvokePrepayPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
-use function Yansongda\Pay\get_wechat_config;
+use function duan617\Pay\get_wechat_config;
 
 class InvokePrepayPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Pay\Mini\InvokePrepayPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Pay\Mini\InvokePrepayPlugin
      */
     protected $plugin;
 

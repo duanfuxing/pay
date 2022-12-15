@@ -1,20 +1,20 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Fund\Profitsharing;
+namespace duan617\Pay\Tests\Plugin\Wechat\Fund\Profitsharing;
 
 use GuzzleHttp\Psr7\Uri;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Parser\OriginResponseParser;
-use Yansongda\Pay\Plugin\Wechat\Fund\Profitsharing\DownloadBillPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Parser\OriginResponseParser;
+use duan617\Pay\Plugin\Wechat\Fund\Profitsharing\DownloadBillPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class DownloadBillPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Fund\Profitsharing\DownloadBillPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Fund\Profitsharing\DownloadBillPlugin
      */
     protected $plugin;
 

@@ -1,20 +1,20 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Unipay\OnlineGateway;
+namespace duan617\Pay\Tests\Plugin\Unipay\OnlineGateway;
 
 use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\RequestInterface;
-use Yansongda\Pay\Parser\ResponseParser;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Unipay\OnlineGateway\WapPayPlugin;
-use Yansongda\Pay\Provider\Unipay;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Parser\ResponseParser;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Unipay\OnlineGateway\WapPayPlugin;
+use duan617\Pay\Provider\Unipay;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 
 class WapPayPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Unipay\OnlineGateway\WapPayPlugin
+     * @var \duan617\Pay\Plugin\Unipay\OnlineGateway\WapPayPlugin
      */
     protected $plugin;
 

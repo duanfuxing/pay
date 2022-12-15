@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Marketing\Coupon;
+namespace duan617\Pay\Plugin\Wechat\Marketing\Coupon;
 
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 /**
  * @see https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_1_4.shtml

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Service;
+namespace duan617\Pay\Service;
 
-use Yansongda\Pay\Contract\ConfigInterface;
-use Yansongda\Pay\Contract\LoggerInterface;
-use Yansongda\Pay\Contract\ServiceProviderInterface;
-use Yansongda\Pay\Pay;
+use duan617\Pay\Contract\ConfigInterface;
+use duan617\Pay\Contract\LoggerInterface;
+use duan617\Pay\Contract\ServiceProviderInterface;
+use duan617\Pay\Pay;
 use Yansongda\Supports\Logger;
 
 class LoggerServiceProvider implements ServiceProviderInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function register($data = null): void
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Parser;
+namespace duan617\Pay\Tests\Parser;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Parser\OriginResponseParser;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Parser\OriginResponseParser;
+use duan617\Pay\Tests\TestCase;
 
 class OriginResponseParserTest extends TestCase
 {

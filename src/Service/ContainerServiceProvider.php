@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Service;
+namespace duan617\Pay\Service;
 
 use Closure;
 use DI\ContainerBuilder;
@@ -10,11 +10,11 @@ use Hyperf\Utils\ApplicationContext as HyperfApplication;
 use Illuminate\Container\Container as LaravelContainer;
 use Psr\Container\ContainerInterface;
 use Throwable;
-use Yansongda\Pay\Contract\ServiceProviderInterface;
-use Yansongda\Pay\Exception\ContainerException;
-use Yansongda\Pay\Exception\ContainerNotFoundException;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Pay;
+use duan617\Pay\Contract\ServiceProviderInterface;
+use duan617\Pay\Exception\ContainerException;
+use duan617\Pay\Exception\ContainerNotFoundException;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Pay;
 
 /**
  * @codeCoverageIgnore
@@ -27,7 +27,7 @@ class ContainerServiceProvider implements ServiceProviderInterface
     ];
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public function register($data = null): void
     {
@@ -53,14 +53,14 @@ class ContainerServiceProvider implements ServiceProviderInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ContainerNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerNotFoundException
      */
     protected function laravelApplication(): bool
     {
         Pay::setContainer(static fn () => LaravelContainer::getInstance());
 
-        Pay::set(\Yansongda\Pay\Contract\ContainerInterface::class, LaravelContainer::getInstance());
+        Pay::set(\duan617\Pay\Contract\ContainerInterface::class, LaravelContainer::getInstance());
 
         if (!Pay::has(ContainerInterface::class)) {
             Pay::set(ContainerInterface::class, LaravelContainer::getInstance());
@@ -70,8 +70,8 @@ class ContainerServiceProvider implements ServiceProviderInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ContainerNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerNotFoundException
      */
     protected function hyperfApplication(): bool
     {
@@ -81,7 +81,7 @@ class ContainerServiceProvider implements ServiceProviderInterface
 
         Pay::setContainer(static fn () => HyperfApplication::getContainer());
 
-        Pay::set(\Yansongda\Pay\Contract\ContainerInterface::class, HyperfApplication::getContainer());
+        Pay::set(\duan617\Pay\Contract\ContainerInterface::class, HyperfApplication::getContainer());
 
         if (!Pay::has(ContainerInterface::class)) {
             Pay::set(ContainerInterface::class, HyperfApplication::getContainer());
@@ -91,7 +91,7 @@ class ContainerServiceProvider implements ServiceProviderInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     protected function defaultApplication(): void
     {
@@ -104,7 +104,7 @@ class ContainerServiceProvider implements ServiceProviderInterface
         try {
             $container = $builder->build();
             $container->set(ContainerInterface::class, $container);
-            $container->set(\Yansongda\Pay\Contract\ContainerInterface::class, $container);
+            $container->set(\duan617\Pay\Contract\ContainerInterface::class, $container);
 
             Pay::setContainer($container);
         } catch (Throwable $e) {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Ecommerce\Refund;
+namespace duan617\Pay\Plugin\Wechat\Ecommerce\Refund;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
 
-use function Yansongda\Pay\get_wechat_config;
+use function duan617\Pay\get_wechat_config;
 
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 /**
  * @see https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_6_1.shtml
@@ -18,7 +18,7 @@ use Yansongda\Pay\Rocket;
 class ApplyPlugin extends GeneralPlugin
 {
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     protected function getUri(Rocket $rocket): string
     {
@@ -31,8 +31,8 @@ class ApplyPlugin extends GeneralPlugin
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function doSomething(Rocket $rocket): void
     {

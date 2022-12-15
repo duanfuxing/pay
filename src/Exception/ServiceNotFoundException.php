@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Exception;
+namespace duan617\Pay\Exception;
 
 use Psr\Container\NotFoundExceptionInterface;
 use Throwable;

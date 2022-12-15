@@ -58,8 +58,8 @@ composer require php-di/php-di
 如果您所使用的框架内有符合 `PSR-11` 的 `Container`，您需要在初始化 **之前**（即，调用 `Pay::config()` 方法之前）执行以下代码即可复用现有的 `Container`:
 
 ```php
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Contract\HttpClientInterface;
+use duan617\Pay\Pay;
+use duan617\Pay\Contract\HttpClientInterface;
 
 // $container = 您现有的 container
 
@@ -94,8 +94,8 @@ composer require guzzlehttp/guzzle:^7.0
 如果您所使用的框架内有符合 `PSR-18` 的 `HTTP Client`，您需要在初始化 **之后**（即，调用 `Pay::config()` 方法后）执行以下代码即可复用现有的 `Client`:
 
 ```php
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Contract\HttpClientInterface;
+use duan617\Pay\Pay;
+use duan617\Pay\Contract\HttpClientInterface;
 
 // $client = 您现有的 http client
 

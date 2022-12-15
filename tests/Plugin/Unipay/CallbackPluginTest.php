@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Tests\Plugin\Unipay;
+namespace duan617\Pay\Tests\Plugin\Unipay;
 
-use Yansongda\Pay\Plugin\Unipay\CallbackPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Plugin\Unipay\CallbackPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 
 class CallbackPluginTest extends TestCase
 {

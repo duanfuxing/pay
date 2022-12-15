@@ -1,11 +1,11 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Alipay\Trade;
+namespace duan617\Pay\Tests\Plugin\Alipay\Trade;
 
-use Yansongda\Pay\Parser\ResponseParser;
-use Yansongda\Pay\Plugin\Alipay\Trade\PayPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Parser\ResponseParser;
+use duan617\Pay\Plugin\Alipay\Trade\PayPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 
 class PayPluginTest extends TestCase
 {

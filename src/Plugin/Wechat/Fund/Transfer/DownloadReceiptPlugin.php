@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Fund\Transfer;
+namespace duan617\Pay\Plugin\Wechat\Fund\Transfer;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Parser\OriginResponseParser;
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Parser\OriginResponseParser;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 /**
  * @see https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter4_3_11.shtml
@@ -16,7 +16,7 @@ use Yansongda\Pay\Rocket;
 class DownloadReceiptPlugin extends GeneralPlugin
 {
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     protected function getUri(Rocket $rocket): string
     {

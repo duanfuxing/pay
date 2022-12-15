@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Shortcut;
+namespace duan617\Pay\Plugin\Wechat\Shortcut;
 
-use Yansongda\Pay\Contract\ShortcutInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Plugin\Wechat\Pay\Common\FindRefundPlugin;
-use Yansongda\Pay\Plugin\Wechat\Pay\Common\QueryPlugin;
+use duan617\Pay\Contract\ShortcutInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Plugin\Wechat\Pay\Common\FindRefundPlugin;
+use duan617\Pay\Plugin\Wechat\Pay\Common\QueryPlugin;
 use Yansongda\Supports\Str;
 
 class QueryShortcut implements ShortcutInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function getPlugins(array $params): array
     {
@@ -48,7 +48,7 @@ class QueryShortcut implements ShortcutInterface
     protected function combinePlugins(): array
     {
         return [
-            \Yansongda\Pay\Plugin\Wechat\Pay\Combine\QueryPlugin::class,
+            \duan617\Pay\Plugin\Wechat\Pay\Combine\QueryPlugin::class,
         ];
     }
 }

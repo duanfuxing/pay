@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Unipay;
+namespace duan617\Pay\Plugin\Unipay;
 
 use Closure;
 use Psr\Http\Message\RequestInterface;
-use Yansongda\Pay\Contract\PluginInterface;
+use duan617\Pay\Contract\PluginInterface;
 
-use function Yansongda\Pay\get_unipay_config;
+use function duan617\Pay\get_unipay_config;
 
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Provider\Unipay;
-use Yansongda\Pay\Request;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Logger;
+use duan617\Pay\Pay;
+use duan617\Pay\Provider\Unipay;
+use duan617\Pay\Request;
+use duan617\Pay\Rocket;
 
 abstract class GeneralPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -35,8 +35,8 @@ abstract class GeneralPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getRequest(Rocket $rocket): RequestInterface
     {
@@ -53,8 +53,8 @@ abstract class GeneralPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getUrl(Rocket $rocket): string
     {

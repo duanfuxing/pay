@@ -1,19 +1,19 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Fund\Profitsharing;
+namespace duan617\Pay\Tests\Plugin\Wechat\Fund\Profitsharing;
 
 use GuzzleHttp\Psr7\Uri;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Wechat\Fund\Profitsharing\ReturnPlugin;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Wechat\Fund\Profitsharing\ReturnPlugin;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class ReturnPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Fund\Profitsharing\ReturnPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Fund\Profitsharing\ReturnPlugin
      */
     protected $plugin;
 

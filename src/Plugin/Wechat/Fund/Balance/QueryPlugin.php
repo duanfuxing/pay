@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Fund\Balance;
+namespace duan617\Pay\Plugin\Wechat\Fund\Balance;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 class QueryPlugin extends GeneralPlugin
 {
@@ -21,7 +21,7 @@ class QueryPlugin extends GeneralPlugin
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     protected function getUri(Rocket $rocket): string
     {

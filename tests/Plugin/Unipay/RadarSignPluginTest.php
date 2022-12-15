@@ -1,17 +1,17 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Unipay;
+namespace duan617\Pay\Tests\Plugin\Unipay;
 
 use GuzzleHttp\Psr7\Request;
-use Yansongda\Pay\Plugin\Unipay\RadarSignPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Plugin\Unipay\RadarSignPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class RadarSignPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Unipay\RadarSignPlugin
+     * @var \duan617\Pay\Plugin\Unipay\RadarSignPlugin
      */
     protected $plugin;
 

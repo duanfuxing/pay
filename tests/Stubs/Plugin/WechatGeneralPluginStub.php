@@ -1,9 +1,9 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Stubs\Plugin;
+namespace duan617\Pay\Tests\Stubs\Plugin;
 
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 class WechatGeneralPluginStub extends GeneralPlugin
 {

@@ -9,14 +9,14 @@ Shortcut 即快捷方式，是一系列 Plugin 的组合，方便我们使用 Pa
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Contract;
+namespace duan617\Pay\Contract;
 
 interface ShortcutInterface
 {
     /**
      * @author duan617 <me@duan617.cn>
      *
-     * @return \Yansongda\Pay\Contract\PluginInterface[]|string[]
+     * @return \duan617\Pay\Contract\PluginInterface[]|string[]
      */
     public function getPlugins(array $params): array;
 }
@@ -32,11 +32,11 @@ interface ShortcutInterface
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Shortcut;
+namespace duan617\Pay\Plugin\Alipay\Shortcut;
 
-use Yansongda\Pay\Contract\ShortcutInterface;
-use Yansongda\Pay\Plugin\Alipay\HtmlResponsePlugin;
-use Yansongda\Pay\Plugin\Alipay\Trade\PagePayPlugin;
+use duan617\Pay\Contract\ShortcutInterface;
+use duan617\Pay\Plugin\Alipay\HtmlResponsePlugin;
+use duan617\Pay\Plugin\Alipay\Trade\PagePayPlugin;
 
 class WebShortcut implements ShortcutInterface
 {

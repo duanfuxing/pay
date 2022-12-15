@@ -1,10 +1,10 @@
 <?php
 
-namespace Yansongda\Pay\Tests;
+namespace duan617\Pay\Tests;
 
 use DI\ContainerBuilder;
 use Hyperf\Utils\ApplicationContext;
-use Yansongda\Pay\Pay;
+use duan617\Pay\Pay;
 
 class TestCase extends \PHPUnit\Framework\TestCase
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Unipay;
+namespace duan617\Pay\Plugin\Unipay;
 
 use Closure;
 use GuzzleHttp\Psr7\Response;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Logger;
+use duan617\Pay\Rocket;
 use Yansongda\Supports\Collection;
 
 class HtmlResponsePlugin implements PluginInterface

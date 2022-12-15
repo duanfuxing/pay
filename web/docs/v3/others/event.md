@@ -19,8 +19,8 @@ composer require symfony/event-dispatcher
 ```php
 <?php
 
-use Yansongda\Pay\Event;
-use Yansongda\Pay\Event\PayStarted;
+use duan617\Pay\Event;
+use duan617\Pay\Event\PayStarted;
 
 // 1. 新建一个监听器
 class PayStartedListener
@@ -44,7 +44,7 @@ Event::addListener(PayStarted::class, [new PayStartedListener(), 'sendEmail']);
 
 ### 支付开始
 
-- 事件类：Yansongda\Pay\Event\PayStarted
+- 事件类：duan617\Pay\Event\PayStarted
 - 说明：此事件将在支付进入核心流程时进行抛出。此时 SDK 只进行了相关初始化操作，其它所有操作均未开始。
 - 额外数据：
     - $rocket (相关参数)
@@ -53,28 +53,28 @@ Event::addListener(PayStarted::class, [new PayStartedListener(), 'sendEmail']);
 
 ### 支付完毕
 
-- 事件类：Yansongda\Pay\Event\PayFinish
+- 事件类：duan617\Pay\Event\PayFinish
 - 说明：此事件将在所有参数处理完毕时抛出。
 - 额外数据：
     - $rocket (相关参数)
 
 ### 开始调用API
 
-- 事件类：Yansongda\Pay\Event\ApiRequesting
+- 事件类：duan617\Pay\Event\ApiRequesting
 - 说明：此事件将在请求支付方的 API 前抛出。
 - 额外数据：
     - $rocket (相关参数)
 
 ### 调用API结束
 
-- 事件类：Yansongda\Pay\Event\ApiRequested
+- 事件类：duan617\Pay\Event\ApiRequested
 - 说明：此事件将在请求支付方的 API 完成之后抛出。
 - 额外数据：
     - $rocket (相关参数)
 
 ### 收到通知
 
-- 事件类：Yansongda\Pay\Event\CallbackReceived
+- 事件类：duan617\Pay\Event\CallbackReceived
 - 说明：此事件将在收到支付方的请求（通常在异步通知或同步通知）时抛出
 - 额外数据：
     - $provider (支付机构)
@@ -83,7 +83,7 @@ Event::addListener(PayStarted::class, [new PayStartedListener(), 'sendEmail']);
     
 ### 调用其它方法
 
-- 事件类：Yansongda\Pay\Event\MethodCalled
+- 事件类：duan617\Pay\Event\MethodCalled
 - 说明：此事件将在调用除 PAYMETHOD 方法（例如，查询订单，退款，取消订单）时抛出
 - 额外数据：
     - $provider (支付机构)

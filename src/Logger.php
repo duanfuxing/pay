@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay;
+namespace duan617\Pay;
 
-use Yansongda\Pay\Contract\ConfigInterface;
-use Yansongda\Pay\Contract\LoggerInterface;
-use Yansongda\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Contract\ConfigInterface;
+use duan617\Pay\Contract\LoggerInterface;
+use duan617\Pay\Exception\InvalidConfigException;
 
 /**
  * @method static void emergency($message, array $context = [])
@@ -22,9 +22,9 @@ use Yansongda\Pay\Exception\InvalidConfigException;
 class Logger
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
      */
     public static function __callStatic(string $method, array $args): void
     {

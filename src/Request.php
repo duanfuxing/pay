@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay;
+namespace duan617\Pay;
 
 use JsonSerializable as JsonSerializableInterface;
 use Yansongda\Supports\Traits\Accessable;

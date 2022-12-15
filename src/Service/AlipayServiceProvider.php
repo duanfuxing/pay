@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Service;
+namespace duan617\Pay\Service;
 
-use Yansongda\Pay\Contract\ParserInterface;
-use Yansongda\Pay\Contract\ServiceProviderInterface;
-use Yansongda\Pay\Parser\CollectionParser;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Provider\Alipay;
+use duan617\Pay\Contract\ParserInterface;
+use duan617\Pay\Contract\ServiceProviderInterface;
+use duan617\Pay\Parser\CollectionParser;
+use duan617\Pay\Pay;
+use duan617\Pay\Provider\Alipay;
 
 class AlipayServiceProvider implements ServiceProviderInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public function register($data = null): void
     {

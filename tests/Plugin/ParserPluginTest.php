@@ -1,20 +1,20 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin;
+namespace duan617\Pay\Tests\Plugin;
 
-use Yansongda\Pay\Contract\ParserInterface;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Parser\NoHttpRequestParser;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\ParserPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\Stubs\FooPackerStub;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Contract\ParserInterface;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Parser\NoHttpRequestParser;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\ParserPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\Stubs\FooPackerStub;
+use duan617\Pay\Tests\TestCase;
 
 class ParserPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\ParserPlugin
+     * @var \duan617\Pay\Plugin\ParserPlugin
      */
     protected $plugin;
 

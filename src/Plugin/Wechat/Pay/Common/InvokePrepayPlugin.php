@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Pay\Common;
+namespace duan617\Pay\Plugin\Wechat\Pay\Common;
 
 use Closure;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
 
-use function Yansongda\Pay\get_wechat_config;
-use function Yansongda\Pay\get_wechat_sign;
+use function duan617\Pay\get_wechat_config;
+use function duan617\Pay\get_wechat_sign;
 
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Logger;
+use duan617\Pay\Pay;
+use duan617\Pay\Rocket;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Config;
 use Yansongda\Supports\Str;
@@ -22,9 +22,9 @@ use Yansongda\Supports\Str;
 class InvokePrepayPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      * @throws \Exception
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
@@ -52,9 +52,9 @@ class InvokePrepayPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getSign(Collection $invokeConfig, array $params): string
     {
@@ -67,8 +67,8 @@ class InvokePrepayPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      * @throws \Exception
      */
     protected function getInvokeConfig(Rocket $rocket, string $prepayId): Config
@@ -87,8 +87,8 @@ class InvokePrepayPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getAppId(Rocket $rocket): string
     {

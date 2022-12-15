@@ -1,19 +1,19 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Unipay\QrCode;
+namespace duan617\Pay\Tests\Plugin\Unipay\QrCode;
 
 use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\RequestInterface;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Unipay\QrCode\CancelPlugin;
-use Yansongda\Pay\Provider\Unipay;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Unipay\QrCode\CancelPlugin;
+use duan617\Pay\Provider\Unipay;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 
 class CancelPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Unipay\QrCode\CancelPlugin
+     * @var \duan617\Pay\Plugin\Unipay\QrCode\CancelPlugin
      */
     protected $plugin;
 

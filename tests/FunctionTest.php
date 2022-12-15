@@ -1,38 +1,38 @@
 <?php
 
-namespace Yansongda\Pay\Tests;
+namespace duan617\Pay\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;
 use Mockery;
-use Yansongda\Pay\Contract\ConfigInterface;
-use Yansongda\Pay\Contract\HttpClientInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Parser\CollectionParser;
-use Yansongda\Pay\Parser\NoHttpRequestParser;
-use Yansongda\Pay\Parser\ResponseParser;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\ConfigInterface;
+use duan617\Pay\Contract\HttpClientInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Parser\CollectionParser;
+use duan617\Pay\Parser\NoHttpRequestParser;
+use duan617\Pay\Parser\ResponseParser;
+use duan617\Pay\Pay;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Rocket;
 use Yansongda\Supports\Str;
-use function Yansongda\Pay\decrypt_wechat_resource;
-use function Yansongda\Pay\decrypt_wechat_resource_aes_256_gcm;
-use function Yansongda\Pay\encrypt_wechat_contents;
-use function Yansongda\Pay\get_alipay_config;
-use function Yansongda\Pay\get_private_cert;
-use function Yansongda\Pay\get_public_cert;
-use function Yansongda\Pay\get_tenant;
-use function Yansongda\Pay\get_unipay_config;
-use function Yansongda\Pay\get_wechat_base_uri;
-use function Yansongda\Pay\get_wechat_config;
-use function Yansongda\Pay\get_wechat_sign;
-use function Yansongda\Pay\reload_wechat_public_certs;
-use function Yansongda\Pay\should_do_http_request;
-use function Yansongda\Pay\verify_alipay_sign;
-use function Yansongda\Pay\verify_unipay_sign;
-use function Yansongda\Pay\verify_wechat_sign;
+use function duan617\Pay\decrypt_wechat_resource;
+use function duan617\Pay\decrypt_wechat_resource_aes_256_gcm;
+use function duan617\Pay\encrypt_wechat_contents;
+use function duan617\Pay\get_alipay_config;
+use function duan617\Pay\get_private_cert;
+use function duan617\Pay\get_public_cert;
+use function duan617\Pay\get_tenant;
+use function duan617\Pay\get_unipay_config;
+use function duan617\Pay\get_wechat_base_uri;
+use function duan617\Pay\get_wechat_config;
+use function duan617\Pay\get_wechat_sign;
+use function duan617\Pay\reload_wechat_public_certs;
+use function duan617\Pay\should_do_http_request;
+use function duan617\Pay\verify_alipay_sign;
+use function duan617\Pay\verify_unipay_sign;
+use function duan617\Pay\verify_wechat_sign;
 
 class FunctionTest extends TestCase
 {

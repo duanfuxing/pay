@@ -1,22 +1,22 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Provider;
+namespace duan617\Pay\Tests\Provider;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;
 use Mockery;
-use Yansongda\Pay\Contract\HttpClientInterface;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Alipay\LaunchPlugin;
-use Yansongda\Pay\Plugin\Alipay\PreparePlugin;
-use Yansongda\Pay\Plugin\Alipay\RadarPlugin;
-use Yansongda\Pay\Plugin\Alipay\RadarSignPlugin;
-use Yansongda\Pay\Plugin\Alipay\SignPlugin;
-use Yansongda\Pay\Plugin\ParserPlugin;
-use Yansongda\Pay\Tests\Stubs\Plugin\FooPluginStub;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Contract\HttpClientInterface;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Alipay\LaunchPlugin;
+use duan617\Pay\Plugin\Alipay\PreparePlugin;
+use duan617\Pay\Plugin\Alipay\RadarPlugin;
+use duan617\Pay\Plugin\Alipay\RadarSignPlugin;
+use duan617\Pay\Plugin\Alipay\SignPlugin;
+use duan617\Pay\Plugin\ParserPlugin;
+use duan617\Pay\Tests\Stubs\Plugin\FooPluginStub;
+use duan617\Pay\Tests\TestCase;
 
 class AlipayTest extends TestCase
 {

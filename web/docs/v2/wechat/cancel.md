@@ -4,4 +4,4 @@
 
 ## 异常
 
-Yansongda\Pay\Exceptions\GatewayException ：Wechat Do Not Have Cancel API! Plase use Close API!
+duan617\Pay\Exceptions\GatewayException ：Wechat Do Not Have Cancel API! Plase use Close API!

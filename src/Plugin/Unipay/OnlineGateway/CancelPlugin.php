@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Unipay\OnlineGateway;
+namespace duan617\Pay\Plugin\Unipay\OnlineGateway;
 
-use Yansongda\Pay\Plugin\Unipay\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Plugin\Unipay\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 /**
  * @see https://open.unionpay.com/tjweb/acproduct/APIList?acpAPIId=755&apiservId=448&version=V2.2&bussType=0

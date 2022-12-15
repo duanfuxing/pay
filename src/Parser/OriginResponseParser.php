@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Parser;
+namespace duan617\Pay\Parser;
 
 use Psr\Http\Message\ResponseInterface;
-use Yansongda\Pay\Contract\ParserInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Contract\ParserInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
 
 class OriginResponseParser implements ParserInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
      */
     public function parse(?ResponseInterface $response): ?ResponseInterface
     {

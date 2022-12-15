@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Parser;
+namespace duan617\Pay\Parser;
 
 use Psr\Http\Message\ResponseInterface;
-use Yansongda\Pay\Contract\ParserInterface;
-use Yansongda\Pay\Pay;
+use duan617\Pay\Contract\ParserInterface;
+use duan617\Pay\Pay;
 use Yansongda\Supports\Collection;
 
 class CollectionParser implements ParserInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function parse(?ResponseInterface $response): Collection
     {

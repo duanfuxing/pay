@@ -1,11 +1,11 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Parser;
+namespace duan617\Pay\Tests\Parser;
 
 use GuzzleHttp\Psr7\Response;
-use Yansongda\Pay\Parser\CollectionParser;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Parser\CollectionParser;
+use duan617\Pay\Pay;
+use duan617\Pay\Tests\TestCase;
 
 class CollectionParserTest extends TestCase
 {

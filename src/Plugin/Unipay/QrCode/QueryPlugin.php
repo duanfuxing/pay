@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Unipay\QrCode;
+namespace duan617\Pay\Plugin\Unipay\QrCode;
 
-use function Yansongda\Pay\get_unipay_config;
+use function duan617\Pay\get_unipay_config;
 
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Pay;
+use duan617\Pay\Rocket;
 
 /**
  * @see https://open.unionpay.com/tjweb/acproduct/APIList?acpAPIId=792&apiservId=468&version=V2.2&bussType=0
  */
-class QueryPlugin extends \Yansongda\Pay\Plugin\Unipay\OnlineGateway\QueryPlugin
+class QueryPlugin extends \duan617\Pay\Plugin\Unipay\OnlineGateway\QueryPlugin
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getUri(Rocket $rocket): string
     {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat;
+namespace duan617\Pay\Plugin\Wechat;
 
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Rocket;
 
 class WechatPublicCertsPlugin extends GeneralPlugin
 {

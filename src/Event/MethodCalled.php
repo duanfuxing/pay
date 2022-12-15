@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Event;
+namespace duan617\Pay\Event;
 
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Rocket;
 
 class MethodCalled extends Event
 {

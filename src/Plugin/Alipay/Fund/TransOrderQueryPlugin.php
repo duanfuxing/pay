@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Fund;
+namespace duan617\Pay\Plugin\Alipay\Fund;
 
-use Yansongda\Pay\Plugin\Alipay\GeneralPlugin;
+use duan617\Pay\Plugin\Alipay\GeneralPlugin;
 
 /**
  * 老版本转账.

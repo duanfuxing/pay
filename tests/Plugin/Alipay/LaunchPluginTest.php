@@ -1,13 +1,13 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Alipay;
+namespace duan617\Pay\Tests\Plugin\Alipay;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Parser\NoHttpRequestParser;
-use Yansongda\Pay\Plugin\Alipay\LaunchPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Parser\NoHttpRequestParser;
+use duan617\Pay\Plugin\Alipay\LaunchPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class LaunchPluginTest extends TestCase

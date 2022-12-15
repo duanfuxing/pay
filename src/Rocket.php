@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay;
+namespace duan617\Pay;
 
 use ArrayAccess;
 use JsonSerializable as JsonSerializableInterface;

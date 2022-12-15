@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Provider;
+namespace duan617\Pay\Provider;
 
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Yansongda\Pay\Event;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\ParserPlugin;
-use Yansongda\Pay\Plugin\Unipay\CallbackPlugin;
-use Yansongda\Pay\Plugin\Unipay\LaunchPlugin;
-use Yansongda\Pay\Plugin\Unipay\PreparePlugin;
-use Yansongda\Pay\Plugin\Unipay\RadarSignPlugin;
+use duan617\Pay\Event;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\ParserPlugin;
+use duan617\Pay\Plugin\Unipay\CallbackPlugin;
+use duan617\Pay\Plugin\Unipay\LaunchPlugin;
+use duan617\Pay\Plugin\Unipay\PreparePlugin;
+use duan617\Pay\Plugin\Unipay\RadarSignPlugin;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Str;
 
@@ -34,9 +34,9 @@ class Unipay extends AbstractProvider
     /**
      * @return \Psr\Http\Message\MessageInterface|\Yansongda\Supports\Collection|array|null
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function __call(string $shortcut, array $params)
     {
@@ -51,9 +51,9 @@ class Unipay extends AbstractProvider
      *
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function find($order)
     {
@@ -71,9 +71,9 @@ class Unipay extends AbstractProvider
      *
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function cancel($order)
     {
@@ -91,7 +91,7 @@ class Unipay extends AbstractProvider
      *
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function close($order)
     {
@@ -101,9 +101,9 @@ class Unipay extends AbstractProvider
     /**
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function refund(array $order)
     {
@@ -115,8 +115,8 @@ class Unipay extends AbstractProvider
     /**
      * @param array|\Psr\Http\Message\ServerRequestInterface|null $contents
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function callback($contents = null, ?array $params = null): Collection
     {

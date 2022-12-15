@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Service;
+namespace duan617\Pay\Service;
 
-use Yansongda\Pay\Contract\ConfigInterface;
-use Yansongda\Pay\Contract\ServiceProviderInterface;
-use Yansongda\Pay\Pay;
+use duan617\Pay\Contract\ConfigInterface;
+use duan617\Pay\Contract\ServiceProviderInterface;
+use duan617\Pay\Pay;
 use Yansongda\Supports\Config;
 
 class ConfigServiceProvider implements ServiceProviderInterface
@@ -34,7 +34,7 @@ class ConfigServiceProvider implements ServiceProviderInterface
     ];
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public function register($data = null): void
     {

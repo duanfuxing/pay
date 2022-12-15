@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay;
+namespace duan617\Pay;
 
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Yansongda\Pay\Contract\ConfigInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Parser\NoHttpRequestParser;
-use Yansongda\Pay\Plugin\ParserPlugin;
-use Yansongda\Pay\Plugin\Wechat\PreparePlugin;
-use Yansongda\Pay\Plugin\Wechat\SignPlugin;
-use Yansongda\Pay\Plugin\Wechat\WechatPublicCertsPlugin;
-use Yansongda\Pay\Provider\Wechat;
+use duan617\Pay\Contract\ConfigInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Parser\NoHttpRequestParser;
+use duan617\Pay\Plugin\ParserPlugin;
+use duan617\Pay\Plugin\Wechat\PreparePlugin;
+use duan617\Pay\Plugin\Wechat\SignPlugin;
+use duan617\Pay\Plugin\Wechat\WechatPublicCertsPlugin;
+use duan617\Pay\Provider\Wechat;
 use Yansongda\Supports\Str;
 
 if (!function_exists('should_do_http_request')) {
@@ -36,8 +36,8 @@ if (!function_exists('get_tenant')) {
 
 if (!function_exists('get_alipay_config')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     function get_alipay_config(array $params = []): array
     {
@@ -69,10 +69,10 @@ if (!function_exists('get_private_cert')) {
 
 if (!function_exists('verify_alipay_sign')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
      */
     function verify_alipay_sign(array $params, string $contents, string $sign): void
     {
@@ -96,8 +96,8 @@ if (!function_exists('verify_alipay_sign')) {
 
 if (!function_exists('get_wechat_config')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     function get_wechat_config(array $params): array
     {
@@ -109,8 +109,8 @@ if (!function_exists('get_wechat_config')) {
 
 if (!function_exists('get_wechat_base_uri')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     function get_wechat_base_uri(array $params): string
     {
@@ -122,9 +122,9 @@ if (!function_exists('get_wechat_base_uri')) {
 
 if (!function_exists('get_wechat_sign')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
      */
     function get_wechat_sign(array $params, string $contents): string
     {
@@ -146,11 +146,11 @@ if (!function_exists('verify_wechat_sign')) {
     /**
      * @param \Psr\Http\Message\ServerRequestInterface|\Psr\Http\Message\ResponseInterface $message
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     function verify_wechat_sign(MessageInterface $message, array $params): void
     {
@@ -201,11 +201,11 @@ if (!function_exists('encrypt_wechat_contents')) {
 
 if (!function_exists('reload_wechat_public_certs')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
      */
     function reload_wechat_public_certs(array $params, ?string $serialNo = null): string
     {
@@ -235,10 +235,10 @@ if (!function_exists('reload_wechat_public_certs')) {
 
 if (!function_exists('decrypt_wechat_resource')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     function decrypt_wechat_resource(array $resource, array $params): array
     {
@@ -269,7 +269,7 @@ if (!function_exists('decrypt_wechat_resource_aes_256_gcm')) {
     /**
      * @return array|string
      *
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
      */
     function decrypt_wechat_resource_aes_256_gcm(string $ciphertext, string $secret, string $nonce, string $associatedData)
     {
@@ -297,8 +297,8 @@ if (!function_exists('decrypt_wechat_resource_aes_256_gcm')) {
 
 if (!function_exists('get_unipay_config')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     function get_unipay_config(array $params): array
     {
@@ -310,10 +310,10 @@ if (!function_exists('get_unipay_config')) {
 
 if (!function_exists('verify_unipay_sign')) {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     function verify_unipay_sign(array $params, string $contents, string $sign): void
     {

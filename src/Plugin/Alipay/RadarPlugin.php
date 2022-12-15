@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay;
+namespace duan617\Pay\Plugin\Alipay;
 
 use Closure;
 use Psr\Http\Message\RequestInterface;
-use Yansongda\Pay\Contract\PluginInterface;
+use duan617\Pay\Contract\PluginInterface;
 
-use function Yansongda\Pay\get_alipay_config;
+use function duan617\Pay\get_alipay_config;
 
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Provider\Alipay;
-use Yansongda\Pay\Request;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Logger;
+use duan617\Pay\Pay;
+use duan617\Pay\Provider\Alipay;
+use duan617\Pay\Request;
+use duan617\Pay\Rocket;
 
 /**
  * @deprecated use RadarSignPlugin instead
@@ -22,8 +22,8 @@ use Yansongda\Pay\Rocket;
 class RadarPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -37,8 +37,8 @@ class RadarPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getRequest(Rocket $rocket): RequestInterface
     {
@@ -56,8 +56,8 @@ class RadarPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getUrl(Rocket $rocket): string
     {

@@ -1,18 +1,18 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Pay\Common;
+namespace duan617\Pay\Tests\Plugin\Wechat\Pay\Common;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Plugin\Wechat\Pay\Common\InvokePrepayPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Plugin\Wechat\Pay\Common\InvokePrepayPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class InvokePrepayPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Pay\Common\InvokePrepayPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Pay\Common\InvokePrepayPlugin
      */
     protected $plugin;
 

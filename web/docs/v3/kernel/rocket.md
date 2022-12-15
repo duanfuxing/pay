@@ -10,7 +10,7 @@ duan617/pay 将 `输入参数`、`请求`、`原始响应`、`最终响应` 抽�
 可以理解为是 🚀 的 `雷达`，负责导航使用。
 
 该属性，实际上最终为一个 `\Psr\Http\Message\RequestInterface` 对象，
-具体到项目，默认情况下，就是 `\Yansongda\Pay\Request`。
+具体到项目，默认情况下，就是 `\duan617\Pay\Request`。
 
 所有需要请求支付供应商 API 的方法，最终都会使用这个 📡 ，去调用 http 接口请求支付供应商的 API。
 
@@ -47,9 +47,9 @@ Pay 项目中，将所有以 _下划线_ 开始的参数都定义为 `特殊参�
 实际的作用为：把控最终请求需要解包的类型
 
 例如，支付宝电脑支付中，其最终返回的是一个 `Response` 对象，不需要直接后端 http 请求支付宝接口的，
-所以当使用支付宝电脑支付时，其 Direction 为 `Yansongda\Pay\Parser\ResponseParser::class`。
+所以当使用支付宝电脑支付时，其 Direction 为 `duan617\Pay\Parser\ResponseParser::class`。
 
-绝大多数情况下，均默认为：`Yansongda\Pay\Parser\CollectionParser::class`
+绝大多数情况下，均默认为：`duan617\Pay\Parser\CollectionParser::class`
 
 ## 🌟 ️Destination
 

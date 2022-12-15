@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Service;
+namespace duan617\Pay\Service;
 
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use Yansongda\Pay\Contract\EventDispatcherInterface;
-use Yansongda\Pay\Contract\ServiceProviderInterface;
-use Yansongda\Pay\Pay;
+use duan617\Pay\Contract\EventDispatcherInterface;
+use duan617\Pay\Contract\ServiceProviderInterface;
+use duan617\Pay\Pay;
 
 class EventServiceProvider implements ServiceProviderInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public function register($data = null): void
     {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Traits;
+namespace duan617\Pay\Traits;
 
-use Yansongda\Pay\Contract\ConfigInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Pay;
+use duan617\Pay\Contract\ConfigInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Pay;
 
 trait GetUnipayCerts
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function getCertId(string $tenant, array $config): string
     {
@@ -39,7 +39,7 @@ trait GetUnipayCerts
     /**
      * @return array ['cert' => 公钥, 'pkey' => 私钥, 'extracerts' => array]
      *
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
      */
     protected function getCerts(array $config): array
     {

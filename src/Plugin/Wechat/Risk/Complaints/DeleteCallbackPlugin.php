@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Risk\Complaints;
+namespace duan617\Pay\Plugin\Wechat\Risk\Complaints;
 
-use Yansongda\Pay\Parser\OriginResponseParser;
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Parser\OriginResponseParser;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 /**
  * @see https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter10_2_5.shtml

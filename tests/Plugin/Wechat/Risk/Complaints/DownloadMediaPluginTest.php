@@ -1,20 +1,20 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Risk\Complaints;
+namespace duan617\Pay\Tests\Plugin\Wechat\Risk\Complaints;
 
 use GuzzleHttp\Psr7\Uri;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Parser\OriginResponseParser;
-use Yansongda\Pay\Plugin\Wechat\Risk\Complaints\DownloadMediaPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Parser\OriginResponseParser;
+use duan617\Pay\Plugin\Wechat\Risk\Complaints\DownloadMediaPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class DownloadMediaPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Risk\Complaints\DownloadMediaPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Risk\Complaints\DownloadMediaPlugin
      */
     protected $plugin;
 

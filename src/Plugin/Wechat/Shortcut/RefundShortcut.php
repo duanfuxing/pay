@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Shortcut;
+namespace duan617\Pay\Plugin\Wechat\Shortcut;
 
-use Yansongda\Pay\Contract\ShortcutInterface;
-use Yansongda\Pay\Plugin\Wechat\Pay\Common\RefundPlugin;
+use duan617\Pay\Contract\ShortcutInterface;
+use duan617\Pay\Plugin\Wechat\Pay\Common\RefundPlugin;
 
 class RefundShortcut implements ShortcutInterface
 {

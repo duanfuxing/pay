@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Pay\Common;
+namespace duan617\Pay\Plugin\Wechat\Pay\Common;
 
-use function Yansongda\Pay\get_wechat_config;
+use function duan617\Pay\get_wechat_config;
 
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 class PrepayPlugin extends GeneralPlugin
 {
@@ -23,8 +23,8 @@ class PrepayPlugin extends GeneralPlugin
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function doSomething(Rocket $rocket): void
     {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Contract;
+namespace duan617\Pay\Contract;
 
 interface ServiceProviderInterface
 {
     /**
      * @param mixed $data
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public function register($data = null): void;
 }

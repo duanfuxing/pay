@@ -1,19 +1,19 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Risk\Complaints;
+namespace duan617\Pay\Tests\Plugin\Wechat\Risk\Complaints;
 
 use GuzzleHttp\Psr7\Uri;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Wechat\Risk\Complaints\UpdateCallbackPlugin;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Wechat\Risk\Complaints\UpdateCallbackPlugin;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class UpdateCallbackPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Risk\Complaints\UpdateCallbackPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Risk\Complaints\UpdateCallbackPlugin
      */
     protected $plugin;
 

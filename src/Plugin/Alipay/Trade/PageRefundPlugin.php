@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Trade;
+namespace duan617\Pay\Plugin\Alipay\Trade;
 
 use Closure;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Parser\ResponseParser;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Logger;
+use duan617\Pay\Parser\ResponseParser;
+use duan617\Pay\Rocket;
 
 class PageRefundPlugin implements PluginInterface
 {

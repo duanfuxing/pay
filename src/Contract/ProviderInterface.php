@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Contract;
+namespace duan617\Pay\Contract;
 
 use Psr\Http\Message\ResponseInterface;
 use Yansongda\Supports\Collection;
@@ -14,9 +14,9 @@ interface ProviderInterface
      *
      * @return \Psr\Http\Message\MessageInterface|\Yansongda\Supports\Collection|array|null
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function pay(array $plugins, array $params);
 

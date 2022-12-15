@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Parser;
+namespace duan617\Pay\Parser;
 
 use Psr\Http\Message\ResponseInterface;
-use Yansongda\Pay\Contract\ParserInterface;
+use duan617\Pay\Contract\ParserInterface;
 
 class NoHttpRequestParser implements ParserInterface
 {

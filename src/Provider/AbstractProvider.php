@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Provider;
+namespace duan617\Pay\Provider;
 
 use GuzzleHttp\Psr7\Utils;
 use Psr\Http\Client\ClientInterface;
 use Throwable;
-use Yansongda\Pay\Contract\HttpClientInterface;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Contract\ProviderInterface;
-use Yansongda\Pay\Contract\ShortcutInterface;
-use Yansongda\Pay\Event;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Parser\ArrayParser;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\HttpClientInterface;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Contract\ProviderInterface;
+use duan617\Pay\Contract\ShortcutInterface;
+use duan617\Pay\Event;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Logger;
+use duan617\Pay\Parser\ArrayParser;
+use duan617\Pay\Pay;
+use duan617\Pay\Rocket;
 
-use function Yansongda\Pay\should_do_http_request;
+use function duan617\Pay\should_do_http_request;
 
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Pipeline;
@@ -31,9 +31,9 @@ abstract class AbstractProvider implements ProviderInterface
     /**
      * @return \Psr\Http\Message\MessageInterface|\Yansongda\Supports\Collection|array|null
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function call(string $plugin, array $params = [])
     {
@@ -52,8 +52,8 @@ abstract class AbstractProvider implements ProviderInterface
     /**
      * @return \Psr\Http\Message\MessageInterface|\Yansongda\Supports\Collection|array|null
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function pay(array $plugins, array $params)
     {
@@ -85,10 +85,10 @@ abstract class AbstractProvider implements ProviderInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
      */
     public function ignite(Rocket $rocket): Rocket
     {
@@ -130,7 +130,7 @@ abstract class AbstractProvider implements ProviderInterface
     abstract public function mergeCommonPlugins(array $plugins): array;
 
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     protected function verifyPlugin(array $plugins): void
     {

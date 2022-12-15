@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Pay\App;
+namespace duan617\Pay\Plugin\Wechat\Pay\App;
 
-use function Yansongda\Pay\get_wechat_config;
-use function Yansongda\Pay\get_wechat_sign;
+use function duan617\Pay\get_wechat_config;
+use function duan617\Pay\get_wechat_sign;
 
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Rocket;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Config;
 use Yansongda\Supports\Str;
@@ -15,11 +15,11 @@ use Yansongda\Supports\Str;
 /**
  * @see https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_2_4.shtml
  */
-class InvokePrepayPlugin extends \Yansongda\Pay\Plugin\Wechat\Pay\Common\InvokePrepayPlugin
+class InvokePrepayPlugin extends \duan617\Pay\Plugin\Wechat\Pay\Common\InvokePrepayPlugin
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      * @throws \Exception
      */
     protected function getInvokeConfig(Rocket $rocket, string $prepayId): Config
@@ -39,9 +39,9 @@ class InvokePrepayPlugin extends \Yansongda\Pay\Plugin\Wechat\Pay\Common\InvokeP
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getSign(Collection $invokeConfig, array $params): string
     {

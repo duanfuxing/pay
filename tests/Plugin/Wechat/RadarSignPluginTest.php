@@ -1,22 +1,22 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat;
+namespace duan617\Pay\Tests\Plugin\Wechat;
 
 use GuzzleHttp\Psr7\Request;
 use ReflectionClass;
-use Yansongda\Pay\Contract\ConfigInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Wechat\RadarSignPlugin;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Contract\ConfigInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Wechat\RadarSignPlugin;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class RadarSignPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\RadarSignPlugin
+     * @var \duan617\Pay\Plugin\Wechat\RadarSignPlugin
      */
     protected $plugin;
 

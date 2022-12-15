@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Shortcut;
+namespace duan617\Pay\Plugin\Alipay\Shortcut;
 
-use Yansongda\Pay\Contract\ShortcutInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Plugin\Alipay\Fund\TransCommonQueryPlugin;
-use Yansongda\Pay\Plugin\Alipay\Trade\FastRefundQueryPlugin;
-use Yansongda\Pay\Plugin\Alipay\Trade\QueryPlugin;
+use duan617\Pay\Contract\ShortcutInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Plugin\Alipay\Fund\TransCommonQueryPlugin;
+use duan617\Pay\Plugin\Alipay\Trade\FastRefundQueryPlugin;
+use duan617\Pay\Plugin\Alipay\Trade\QueryPlugin;
 use Yansongda\Supports\Str;
 
 class QueryShortcut implements ShortcutInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function getPlugins(array $params): array
     {

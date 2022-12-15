@@ -1,10 +1,10 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Parser;
+namespace duan617\Pay\Tests\Parser;
 
 use GuzzleHttp\Psr7\Response;
-use Yansongda\Pay\Parser\NoHttpRequestParser;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Parser\NoHttpRequestParser;
+use duan617\Pay\Tests\TestCase;
 
 class NoHttpRequestParserTest extends TestCase
 {

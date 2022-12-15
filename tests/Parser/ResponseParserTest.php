@@ -1,6 +1,6 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Parser;
+namespace duan617\Pay\Tests\Parser;
 
 class ResponseParserTest extends NoHttpRequestParserTest
 {

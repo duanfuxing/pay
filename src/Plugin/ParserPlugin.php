@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin;
+namespace duan617\Pay\Plugin;
 
 use Closure;
-use Yansongda\Pay\Contract\ParserInterface;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\ParserInterface;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Pay;
+use duan617\Pay\Rocket;
 
 class ParserPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -33,9 +33,9 @@ class ParserPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getPacker(Rocket $rocket): ParserInterface
     {

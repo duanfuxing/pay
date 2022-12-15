@@ -1,21 +1,21 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Fund\Balance;
+namespace duan617\Pay\Tests\Plugin\Wechat\Fund\Balance;
 
 use GuzzleHttp\Psr7\Uri;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Wechat\Fund\Balance\QueryPlugin;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Wechat\Fund\Balance\QueryPlugin;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class QueryPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Fund\Balance\QueryPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Fund\Balance\QueryPlugin
      */
     protected $plugin;
 

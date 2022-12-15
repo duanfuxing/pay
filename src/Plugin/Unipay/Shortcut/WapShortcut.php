@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Unipay\Shortcut;
+namespace duan617\Pay\Plugin\Unipay\Shortcut;
 
-use Yansongda\Pay\Contract\ShortcutInterface;
-use Yansongda\Pay\Plugin\Unipay\HtmlResponsePlugin;
-use Yansongda\Pay\Plugin\Unipay\OnlineGateway\WapPayPlugin;
+use duan617\Pay\Contract\ShortcutInterface;
+use duan617\Pay\Plugin\Unipay\HtmlResponsePlugin;
+use duan617\Pay\Plugin\Unipay\OnlineGateway\WapPayPlugin;
 
 class WapShortcut implements ShortcutInterface
 {

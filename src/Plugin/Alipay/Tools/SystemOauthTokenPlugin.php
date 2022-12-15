@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Tools;
+namespace duan617\Pay\Plugin\Alipay\Tools;
 
-use Yansongda\Pay\Plugin\Alipay\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Plugin\Alipay\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 /**
  * @see https://opendocs.alipay.com/open/02ailc

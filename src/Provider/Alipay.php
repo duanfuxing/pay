@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Provider;
+namespace duan617\Pay\Provider;
 
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Yansongda\Pay\Event;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Alipay\CallbackPlugin;
-use Yansongda\Pay\Plugin\Alipay\LaunchPlugin;
-use Yansongda\Pay\Plugin\Alipay\PreparePlugin;
-use Yansongda\Pay\Plugin\Alipay\RadarSignPlugin;
-use Yansongda\Pay\Plugin\ParserPlugin;
+use duan617\Pay\Event;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Alipay\CallbackPlugin;
+use duan617\Pay\Plugin\Alipay\LaunchPlugin;
+use duan617\Pay\Plugin\Alipay\PreparePlugin;
+use duan617\Pay\Plugin\Alipay\RadarSignPlugin;
+use duan617\Pay\Plugin\ParserPlugin;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Str;
 
@@ -38,9 +38,9 @@ class Alipay extends AbstractProvider
     /**
      * @return \Psr\Http\Message\MessageInterface|\Yansongda\Supports\Collection|array|null
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function __call(string $shortcut, array $params)
     {
@@ -55,9 +55,9 @@ class Alipay extends AbstractProvider
      *
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function find($order)
     {
@@ -73,9 +73,9 @@ class Alipay extends AbstractProvider
      *
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function cancel($order)
     {
@@ -91,9 +91,9 @@ class Alipay extends AbstractProvider
      *
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function close($order)
     {
@@ -107,9 +107,9 @@ class Alipay extends AbstractProvider
     /**
      * @return array|\Yansongda\Supports\Collection
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function refund(array $order)
     {
@@ -121,8 +121,8 @@ class Alipay extends AbstractProvider
     /**
      * @param array|\Psr\Http\Message\ServerRequestInterface|null $contents
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function callback($contents = null, ?array $params = null): Collection
     {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Parser;
+namespace duan617\Pay\Tests\Parser;
 
 use GuzzleHttp\Psr7\Response;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Parser\ArrayParser;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Parser\ArrayParser;
+use duan617\Pay\Tests\TestCase;
 
 class ArrayParserTest extends TestCase
 {

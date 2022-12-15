@@ -120,7 +120,7 @@ composer require "duan617/pay:^1.0"
 
 namespace App\Http\Controllers;
 
-use Yansongda\Pay\Pay;
+use duan617\Pay\Pay;
 use Illuminate\Http\Request;
 
 class PayController extends Controller
@@ -183,7 +183,7 @@ class PayController extends Controller
 
 namespace App\Http\Controllers;
 
-use Yansongda\Pay\Pay;
+use duan617\Pay\Pay;
 use Illuminate\Http\Request;
 
 class PayController extends Controller

@@ -12,10 +12,10 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Contract;
+namespace duan617\Pay\Contract;
 
 use Closure;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Rocket;
 
 interface PluginInterface
 {
@@ -39,13 +39,13 @@ interface PluginInterface
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Trade;
+namespace duan617\Pay\Plugin\Alipay\Trade;
 
 use Closure;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Parser\ResponseParser;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Logger;
+use duan617\Pay\Parser\ResponseParser;
+use duan617\Pay\Rocket;
 
 class PagePayPlugin implements PluginInterface
 {
@@ -79,13 +79,13 @@ class PagePayPlugin implements PluginInterface
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay;
+namespace duan617\Pay\Plugin\Alipay;
 
 use Closure;
 use GuzzleHttp\Psr7\Response;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Logger;
+use duan617\Pay\Rocket;
 use Yansongda\Supports\Arr;
 use Yansongda\Supports\Collection;
 
@@ -161,9 +161,9 @@ class HtmlResponsePlugin implements PluginInterface
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay\Trade;
+namespace duan617\Pay\Plugin\Alipay\Trade;
 
-use Yansongda\Pay\Plugin\Alipay\GeneralPlugin;
+use duan617\Pay\Plugin\Alipay\GeneralPlugin;
 
 class QueryPlugin extends GeneralPlugin
 {
@@ -179,12 +179,12 @@ class QueryPlugin extends GeneralPlugin
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay;
+namespace duan617\Pay\Plugin\Alipay;
 
 use Closure;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Logger;
+use duan617\Pay\Rocket;
 
 abstract class GeneralPlugin implements PluginInterface
 {
@@ -217,19 +217,19 @@ abstract class GeneralPlugin implements PluginInterface
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat\Pay\Common;
+namespace duan617\Pay\Plugin\Wechat\Pay\Common;
 
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Plugin\Wechat\GeneralPlugin;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Plugin\Wechat\GeneralPlugin;
+use duan617\Pay\Rocket;
 
 class QueryPlugin extends GeneralPlugin
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerDependencyException
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ContainerDependencyException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     protected function getUri(Rocket $rocket): string
     {
@@ -263,23 +263,23 @@ class QueryPlugin extends GeneralPlugin
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat;
+namespace duan617\Pay\Plugin\Wechat;
 
 use Closure;
 use Psr\Http\Message\RequestInterface;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Request;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Logger;
+use duan617\Pay\Pay;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Request;
+use duan617\Pay\Rocket;
 
 abstract class GeneralPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ContainerDependencyException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerDependencyException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -294,9 +294,9 @@ abstract class GeneralPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerDependencyException
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerDependencyException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getRequest(Rocket $rocket): RequestInterface
     {
@@ -313,9 +313,9 @@ abstract class GeneralPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerDependencyException
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerDependencyException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getUrl(Rocket $rocket): string
     {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Event;
+namespace duan617\Pay\Event;
 
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Rocket;
 
 class PayStarted extends Event
 {
     /**
-     * @var \Yansongda\Pay\Contract\PluginInterface[]
+     * @var \duan617\Pay\Contract\PluginInterface[]
      */
     public array $plugins;
 

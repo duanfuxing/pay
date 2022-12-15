@@ -2,27 +2,27 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat;
+namespace duan617\Pay\Plugin\Wechat;
 
 use Closure;
 use Psr\Http\Message\ResponseInterface;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Logger;
+use duan617\Pay\Rocket;
 
-use function Yansongda\Pay\should_do_http_request;
-use function Yansongda\Pay\verify_wechat_sign;
+use function duan617\Pay\should_do_http_request;
+use function duan617\Pay\verify_wechat_sign;
 
 class LaunchPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -45,7 +45,7 @@ class LaunchPlugin implements PluginInterface
     /**
      * @return array|\Psr\Http\Message\MessageInterface|\Yansongda\Supports\Collection|null
      *
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
      */
     protected function validateResponse(Rocket $rocket)
     {

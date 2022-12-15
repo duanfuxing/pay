@@ -2,31 +2,31 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat;
+namespace duan617\Pay\Plugin\Wechat;
 
 use Closure;
 use GuzzleHttp\Psr7\Utils;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidConfigException;
-use Yansongda\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidConfigException;
+use duan617\Pay\Exception\InvalidParamsException;
 
-use function Yansongda\Pay\get_public_cert;
-use function Yansongda\Pay\get_wechat_config;
-use function Yansongda\Pay\get_wechat_sign;
+use function duan617\Pay\get_public_cert;
+use function duan617\Pay\get_wechat_config;
+use function duan617\Pay\get_wechat_sign;
 
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Logger;
+use duan617\Pay\Rocket;
 use Yansongda\Supports\Collection;
 use Yansongda\Supports\Str;
 
 class RadarSignPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      * @throws \Exception
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
@@ -56,9 +56,9 @@ class RadarSignPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function getWechatAuthorization(array $params, int $timestamp, string $random, string $contents): string
     {
@@ -88,7 +88,7 @@ class RadarSignPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     protected function getContents(Rocket $rocket, int $timestamp, string $random): string
     {

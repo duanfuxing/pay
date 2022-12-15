@@ -2,33 +2,33 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Wechat;
+namespace duan617\Pay\Plugin\Wechat;
 
 use Closure;
 use GuzzleHttp\Psr7\Utils;
 use Psr\Http\Message\ServerRequestInterface;
-use Yansongda\Pay\Contract\PluginInterface;
+use duan617\Pay\Contract\PluginInterface;
 
-use function Yansongda\Pay\decrypt_wechat_resource;
+use function duan617\Pay\decrypt_wechat_resource;
 
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Parser\NoHttpRequestParser;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Logger;
+use duan617\Pay\Parser\NoHttpRequestParser;
+use duan617\Pay\Rocket;
 
-use function Yansongda\Pay\verify_wechat_sign;
+use function duan617\Pay\verify_wechat_sign;
 
 use Yansongda\Supports\Collection;
 
 class CallbackPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -53,7 +53,7 @@ class CallbackPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     protected function formatRequestAndParams(Rocket $rocket): void
     {

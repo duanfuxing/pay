@@ -1,13 +1,13 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Fund\Transfer;
+namespace duan617\Pay\Tests\Plugin\Wechat\Fund\Transfer;
 
 use GuzzleHttp\Psr7\Uri;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Wechat\Fund\Transfer\CreatePlugin;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Wechat\Fund\Transfer\CreatePlugin;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class CreatePluginTest extends TestCase

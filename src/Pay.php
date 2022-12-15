@@ -2,28 +2,28 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay;
+namespace duan617\Pay;
 
 use Closure;
 use Illuminate\Container\Container as LaravelContainer;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Throwable;
-use Yansongda\Pay\Contract\ServiceProviderInterface;
-use Yansongda\Pay\Exception\ContainerException;
-use Yansongda\Pay\Exception\ContainerNotFoundException;
-use Yansongda\Pay\Exception\ServiceNotFoundException;
-use Yansongda\Pay\Provider\Alipay;
-use Yansongda\Pay\Provider\Unipay;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Service\AlipayServiceProvider;
-use Yansongda\Pay\Service\ConfigServiceProvider;
-use Yansongda\Pay\Service\ContainerServiceProvider;
-use Yansongda\Pay\Service\EventServiceProvider;
-use Yansongda\Pay\Service\HttpServiceProvider;
-use Yansongda\Pay\Service\LoggerServiceProvider;
-use Yansongda\Pay\Service\UnipayServiceProvider;
-use Yansongda\Pay\Service\WechatServiceProvider;
+use duan617\Pay\Contract\ServiceProviderInterface;
+use duan617\Pay\Exception\ContainerException;
+use duan617\Pay\Exception\ContainerNotFoundException;
+use duan617\Pay\Exception\ServiceNotFoundException;
+use duan617\Pay\Provider\Alipay;
+use duan617\Pay\Provider\Unipay;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Service\AlipayServiceProvider;
+use duan617\Pay\Service\ConfigServiceProvider;
+use duan617\Pay\Service\ContainerServiceProvider;
+use duan617\Pay\Service\EventServiceProvider;
+use duan617\Pay\Service\HttpServiceProvider;
+use duan617\Pay\Service\LoggerServiceProvider;
+use duan617\Pay\Service\UnipayServiceProvider;
+use duan617\Pay\Service\WechatServiceProvider;
 
 /**
  * @method static Alipay alipay(array $config = [], $container = null)
@@ -75,7 +75,7 @@ class Pay
     /**
      * @param \Closure|\Psr\Container\ContainerInterface|null $container
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     private function __construct(array $config, $container = null)
     {
@@ -85,8 +85,8 @@ class Pay
     /**
      * @return mixed
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public static function __callStatic(string $service, array $config)
     {
@@ -100,7 +100,7 @@ class Pay
     /**
      * @param \Closure|\Psr\Container\ContainerInterface|null $container
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public static function config(array $config = [], $container = null): bool
     {
@@ -118,7 +118,7 @@ class Pay
      *
      * @param mixed $value
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public static function set(string $name, $value): void
     {
@@ -150,7 +150,7 @@ class Pay
      *
      * @return mixed
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public static function make(string $service, array $parameters = [])
     {
@@ -174,8 +174,8 @@ class Pay
     /**
      * @return mixed
      *
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public static function get(string $service)
     {
@@ -191,7 +191,7 @@ class Pay
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerNotFoundException
      */
     public static function has(string $service): bool
     {
@@ -207,7 +207,7 @@ class Pay
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerNotFoundException
      */
     public static function getContainer(): ContainerInterface
     {
@@ -235,7 +235,7 @@ class Pay
     /**
      * @param mixed $data
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     public static function registerService(string $service, $data): void
     {
@@ -249,7 +249,7 @@ class Pay
     /**
      * @param \Closure|\Psr\Container\ContainerInterface|null $container
      *
-     * @throws \Yansongda\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\ContainerException
      */
     private function registerServices(array $config, $container = null): void
     {

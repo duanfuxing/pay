@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Tests\Plugin\Unipay\Shortcut;
+namespace duan617\Pay\Tests\Plugin\Unipay\Shortcut;
 
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Plugin\Unipay\OnlineGateway\RefundPlugin;
-use Yansongda\Pay\Plugin\Unipay\Shortcut\RefundShortcut;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Plugin\Unipay\OnlineGateway\RefundPlugin;
+use duan617\Pay\Plugin\Unipay\Shortcut\RefundShortcut;
+use duan617\Pay\Tests\TestCase;
 
 class RefundShortcutTest extends TestCase
 {
@@ -30,7 +30,7 @@ class RefundShortcutTest extends TestCase
     public function testQrCode()
     {
         self::assertEquals([
-            \Yansongda\Pay\Plugin\Unipay\QrCode\RefundPlugin::class,
+            \duan617\Pay\Plugin\Unipay\QrCode\RefundPlugin::class,
         ], $this->plugin->getPlugins(['_type' => 'qr_code']));
     }
 

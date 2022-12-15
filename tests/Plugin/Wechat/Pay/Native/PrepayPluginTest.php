@@ -1,20 +1,20 @@
 <?php
 
-namespace Yansongda\Pay\Tests\Plugin\Wechat\Pay\Native;
+namespace duan617\Pay\Tests\Plugin\Wechat\Pay\Native;
 
 use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\RequestInterface;
-use Yansongda\Pay\Pay;
-use Yansongda\Pay\Plugin\Wechat\Pay\Native\PrepayPlugin;
-use Yansongda\Pay\Provider\Wechat;
-use Yansongda\Pay\Rocket;
-use Yansongda\Pay\Tests\TestCase;
+use duan617\Pay\Pay;
+use duan617\Pay\Plugin\Wechat\Pay\Native\PrepayPlugin;
+use duan617\Pay\Provider\Wechat;
+use duan617\Pay\Rocket;
+use duan617\Pay\Tests\TestCase;
 use Yansongda\Supports\Collection;
 
 class PrepayPluginTest extends TestCase
 {
     /**
-     * @var \Yansongda\Pay\Plugin\Wechat\Pay\Native\PrepayPlugin
+     * @var \duan617\Pay\Plugin\Wechat\Pay\Native\PrepayPlugin
      */
     protected $plugin;
 

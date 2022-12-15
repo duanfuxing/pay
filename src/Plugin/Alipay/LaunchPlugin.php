@@ -2,27 +2,27 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Alipay;
+namespace duan617\Pay\Plugin\Alipay;
 
 use Closure;
-use Yansongda\Pay\Contract\PluginInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidResponseException;
-use Yansongda\Pay\Logger;
-use Yansongda\Pay\Rocket;
+use duan617\Pay\Contract\PluginInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidResponseException;
+use duan617\Pay\Logger;
+use duan617\Pay\Rocket;
 
-use function Yansongda\Pay\should_do_http_request;
-use function Yansongda\Pay\verify_alipay_sign;
+use function duan617\Pay\should_do_http_request;
+use function duan617\Pay\verify_alipay_sign;
 
 use Yansongda\Supports\Collection;
 
 class LaunchPlugin implements PluginInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     public function assembly(Rocket $rocket, Closure $next): Rocket
     {
@@ -46,10 +46,10 @@ class LaunchPlugin implements PluginInterface
     }
 
     /**
-     * @throws \Yansongda\Pay\Exception\ContainerException
-     * @throws \Yansongda\Pay\Exception\InvalidConfigException
-     * @throws \Yansongda\Pay\Exception\InvalidResponseException
-     * @throws \Yansongda\Pay\Exception\ServiceNotFoundException
+     * @throws \duan617\Pay\Exception\ContainerException
+     * @throws \duan617\Pay\Exception\InvalidConfigException
+     * @throws \duan617\Pay\Exception\InvalidResponseException
+     * @throws \duan617\Pay\Exception\ServiceNotFoundException
      */
     protected function verifySign(array $params, Collection $response, ?array $result): void
     {

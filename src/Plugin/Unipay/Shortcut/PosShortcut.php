@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Yansongda\Pay\Plugin\Unipay\Shortcut;
+namespace duan617\Pay\Plugin\Unipay\Shortcut;
 
-use Yansongda\Pay\Contract\ShortcutInterface;
-use Yansongda\Pay\Exception\Exception;
-use Yansongda\Pay\Exception\InvalidParamsException;
-use Yansongda\Pay\Plugin\Unipay\QrCode\PosNormalPlugin;
-use Yansongda\Pay\Plugin\Unipay\QrCode\PosPreAuthPlugin;
+use duan617\Pay\Contract\ShortcutInterface;
+use duan617\Pay\Exception\Exception;
+use duan617\Pay\Exception\InvalidParamsException;
+use duan617\Pay\Plugin\Unipay\QrCode\PosNormalPlugin;
+use duan617\Pay\Plugin\Unipay\QrCode\PosPreAuthPlugin;
 use Yansongda\Supports\Str;
 
 class PosShortcut implements ShortcutInterface
 {
     /**
-     * @throws \Yansongda\Pay\Exception\InvalidParamsException
+     * @throws \duan617\Pay\Exception\InvalidParamsException
      */
     public function getPlugins(array $params): array
     {
